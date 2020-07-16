@@ -8,5 +8,5 @@ Built with ReactJS
 Run this command from the project root folder.
 
 ```
-$ docker-compose up
+$ docker-compose up --build
 ```
