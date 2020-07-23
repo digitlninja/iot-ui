@@ -14,6 +14,14 @@ const routes = [
     layout: "/admin",
   },
   {
+    path: "/register",
+    name: "Register",
+    icon: "ni ni-shop text-primary",
+    component: Register,
+    state: "dashboardsCollapse",
+    layout: "/admin",
+  },
+  {
     collapse: true,
     name: "Examples",
     icon: "ni ni-ungroup text-orange",
