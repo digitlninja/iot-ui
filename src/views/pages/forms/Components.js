@@ -45,10 +45,10 @@ import {
   ListGroup,
   Container,
   Row,
-  Col
+  Col,
 } from "reactstrap";
 // core components
-import SimpleHeader from "components/Headers/SimpleHeader.js";
+import SimpleHeader from "components/headers/SimpleHeader.js";
 
 Dropzone.autoDiscover = false;
 
@@ -58,7 +58,7 @@ class Components extends React.Component {
     tagsinput: ["Bucharest", "Cluj", "Iasi", "Timisoara", "Piatra Neamt"],
     slider1Value: "100.00",
     slider2Values: ["200.00", "400.00"],
-    reactQuillText: ""
+    reactQuillText: "",
   };
   componentDidMount() {
     var slider1 = this.refs.slider1;
@@ -67,12 +67,12 @@ class Components extends React.Component {
       start: [100],
       connect: [true, false],
       step: 0.01,
-      range: { min: 100.0, max: 500.0 }
+      range: { min: 100.0, max: 500.0 },
     }).on(
       "update",
-      function(values, handle) {
+      function (values, handle) {
         this.setState({
-          slider1Value: values[0]
+          slider1Value: values[0],
         });
       }.bind(this)
     );
@@ -80,12 +80,12 @@ class Components extends React.Component {
       start: [200.0, 400.0],
       connect: [false, true, false],
       step: 0.01,
-      range: { min: 100.0, max: 500.0 }
+      range: { min: 100.0, max: 500.0 },
     }).on(
       "update",
-      function(values, handle) {
+      function (values, handle) {
         this.setState({
-          slider2Values: [values[0], values[1]]
+          slider2Values: [values[0], values[1]],
         });
       }.bind(this)
     );
@@ -104,14 +104,14 @@ class Components extends React.Component {
         .innerHTML,
       maxFiles: 1,
       acceptedFiles: "image/*",
-      init: function() {
-        this.on("addedfile", function(file) {
+      init: function () {
+        this.on("addedfile", function (file) {
           if (currentSingleFile) {
             this.removeFile(currentSingleFile);
           }
           currentSingleFile = file;
         });
-      }
+      },
     });
     document.getElementsByClassName("dz-preview-single")[0].innerHTML = "";
     // this variable is to delete the previous image from the dropzone state
@@ -129,22 +129,22 @@ class Components extends React.Component {
         .innerHTML,
       maxFiles: null,
       acceptedFiles: null,
-      init: function() {
-        this.on("addedfile", function(file) {
+      init: function () {
+        this.on("addedfile", function (file) {
           if (currentMultipleFile) {
           }
           currentMultipleFile = file;
         });
-      }
+      },
     });
     document.getElementsByClassName("dz-preview-multiple")[0].innerHTML = "";
   }
-  handleTagsinput = tagsinput => {
+  handleTagsinput = (tagsinput) => {
     this.setState({ tagsinput });
   };
-  handleReactQuillChange = value => {
+  handleReactQuillChange = (value) => {
     this.setState({
-      reactQuillText: value
+      reactQuillText: value,
     });
   };
   handleReactDatetimeChange = (who, date) => {
@@ -155,7 +155,7 @@ class Components extends React.Component {
     ) {
       this.setState({
         startDate: date,
-        endDate: date
+        endDate: date,
       });
     } else if (
       this.state.endDate &&
@@ -164,11 +164,11 @@ class Components extends React.Component {
     ) {
       this.setState({
         startDate: date,
-        endDate: date
+        endDate: date,
       });
     } else {
       this.setState({
-        [who]: date
+        [who]: date,
       });
     }
   };
@@ -177,7 +177,7 @@ class Components extends React.Component {
   // start-date className which means that this day will only have left border radius
   // end-date className which means that this day will only have right border radius
   // this way, the selected dates will look nice and will only be rounded at the ends
-  getClassNameReactDatetimeDays = date => {
+  getClassNameReactDatetimeDays = (date) => {
     if (this.state.startDate && this.state.endDate) {
     }
     if (
@@ -219,7 +219,7 @@ class Components extends React.Component {
                           <FormGroup>
                             <InputGroup
                               className={classnames("input-group-merge", {
-                                focused: this.state.yourName
+                                focused: this.state.yourName,
                               })}
                             >
                               <InputGroupAddon addonType="prepend">
@@ -230,8 +230,12 @@ class Components extends React.Component {
                               <Input
                                 placeholder="Your name"
                                 type="text"
-                                onFocus={e => this.setState({ yourName: true })}
-                                onBlur={e => this.setState({ yourName: false })}
+                                onFocus={(e) =>
+                                  this.setState({ yourName: true })
+                                }
+                                onBlur={(e) =>
+                                  this.setState({ yourName: false })
+                                }
                               />
                             </InputGroup>
                           </FormGroup>
@@ -240,7 +244,7 @@ class Components extends React.Component {
                           <FormGroup>
                             <InputGroup
                               className={classnames("input-group-merge", {
-                                focused: this.state.emailAddress
+                                focused: this.state.emailAddress,
                               })}
                             >
                               <InputGroupAddon addonType="prepend">
@@ -251,10 +255,10 @@ class Components extends React.Component {
                               <Input
                                 placeholder="Email address"
                                 type="email"
-                                onFocus={e =>
+                                onFocus={(e) =>
                                   this.setState({ emailAddress: true })
                                 }
-                                onBlur={e =>
+                                onBlur={(e) =>
                                   this.setState({ emailAddress: false })
                                 }
                               />
@@ -267,14 +271,18 @@ class Components extends React.Component {
                           <FormGroup>
                             <InputGroup
                               className={classnames("input-group-merge", {
-                                focused: this.state.location
+                                focused: this.state.location,
                               })}
                             >
                               <Input
                                 placeholder="Location"
                                 type="text"
-                                onFocus={e => this.setState({ location: true })}
-                                onBlur={e => this.setState({ location: false })}
+                                onFocus={(e) =>
+                                  this.setState({ location: true })
+                                }
+                                onBlur={(e) =>
+                                  this.setState({ location: false })
+                                }
                               />
                               <InputGroupAddon addonType="append">
                                 <InputGroupText>
@@ -288,14 +296,18 @@ class Components extends React.Component {
                           <FormGroup>
                             <InputGroup
                               className={classnames("input-group-merge", {
-                                focused: this.state.password
+                                focused: this.state.password,
                               })}
                             >
                               <Input
                                 placeholder="Password"
                                 type="password"
-                                onFocus={e => this.setState({ password: true })}
-                                onBlur={e => this.setState({ password: false })}
+                                onFocus={(e) =>
+                                  this.setState({ password: true })
+                                }
+                                onBlur={(e) =>
+                                  this.setState({ password: false })
+                                }
                               />
                               <InputGroupAddon addonType="append">
                                 <InputGroupText>
@@ -311,7 +323,7 @@ class Components extends React.Component {
                           <FormGroup>
                             <InputGroup
                               className={classnames("input-group-merge", {
-                                focused: this.state.paymentMethos
+                                focused: this.state.paymentMethos,
                               })}
                             >
                               <InputGroupAddon addonType="prepend">
@@ -322,10 +334,10 @@ class Components extends React.Component {
                               <Input
                                 placeholder="Payment method"
                                 type="text"
-                                onFocus={e =>
+                                onFocus={(e) =>
                                   this.setState({ paymentMethos: true })
                                 }
-                                onBlur={e =>
+                                onBlur={(e) =>
                                   this.setState({ paymentMethos: false })
                                 }
                               />
@@ -343,7 +355,7 @@ class Components extends React.Component {
                           <FormGroup>
                             <InputGroup
                               className={classnames("input-group-merge", {
-                                focused: this.state.phoneNumber
+                                focused: this.state.phoneNumber,
                               })}
                             >
                               <InputGroupAddon addonType="prepend">
@@ -354,10 +366,10 @@ class Components extends React.Component {
                               <Input
                                 placeholder="Phone number"
                                 type="text"
-                                onFocus={e =>
+                                onFocus={(e) =>
                                   this.setState({ phoneNumber: true })
                                 }
-                                onBlur={e =>
+                                onBlur={(e) =>
                                   this.setState({ phoneNumber: false })
                                 }
                               />
@@ -383,7 +395,7 @@ class Components extends React.Component {
                         className="form-control"
                         defaultValue="1"
                         options={{
-                          placeholder: "Select"
+                          placeholder: "Select",
                         }}
                         data={[
                           { id: "1", text: "Alerts" },
@@ -391,7 +403,7 @@ class Components extends React.Component {
                           { id: "3", text: "Buttons" },
                           { id: "4", text: "Cards" },
                           { id: "5", text: "Forms" },
-                          { id: "6", text: "Modals" }
+                          { id: "6", text: "Modals" },
                         ]}
                       />
                     </Form>
@@ -414,7 +426,7 @@ class Components extends React.Component {
                             </label>
                             <ReactDatetime
                               inputProps={{
-                                placeholder: "Date Picker Here"
+                                placeholder: "Date Picker Here",
                               }}
                               timeFormat={false}
                             />
@@ -429,11 +441,11 @@ class Components extends React.Component {
                           <FormGroup>
                             <ReactDatetime
                               inputProps={{
-                                placeholder: "Date Picker Here"
+                                placeholder: "Date Picker Here",
                               }}
                               value={this.state.startDate}
                               timeFormat={false}
-                              onChange={e =>
+                              onChange={(e) =>
                                 this.handleReactDatetimeChange("startDate", e)
                               }
                               renderDay={(props, currentDate, selectedDate) => {
@@ -457,11 +469,11 @@ class Components extends React.Component {
                             </label>
                             <ReactDatetime
                               inputProps={{
-                                placeholder: "Date Picker Here"
+                                placeholder: "Date Picker Here",
                               }}
                               value={this.state.endDate}
                               timeFormat={false}
-                              onChange={e =>
+                              onChange={(e) =>
                                 this.handleReactDatetimeChange("endDate", e)
                               }
                               renderDay={(props, currentDate, selectedDate) => {
@@ -502,13 +514,13 @@ class Components extends React.Component {
                             ["link", "blockquote", "code", "image"],
                             [
                               {
-                                list: "ordered"
+                                list: "ordered",
                               },
                               {
-                                list: "bullet"
-                              }
-                            ]
-                          ]
+                                list: "bullet",
+                              },
+                            ],
+                          ],
                         }}
                       />
                     </Form>
@@ -532,7 +544,7 @@ class Components extends React.Component {
                         tagProps={{ className: "tag badge mr-1" }}
                         inputProps={{
                           className: "",
-                          placeholder: ""
+                          placeholder: "",
                         }}
                       />
                     </Form>

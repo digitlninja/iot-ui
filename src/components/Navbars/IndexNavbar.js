@@ -29,7 +29,7 @@ import {
   Row,
   Col,
   UncontrolledTooltip,
-  Button
+  Button,
 } from "reactstrap";
 
 class AdminNavbar extends React.Component {

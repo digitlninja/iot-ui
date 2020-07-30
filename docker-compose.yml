@@ -5,4 +5,6 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - CI=true
+      - TESTT='http://localhost:3001'
+      - GRAPHQL_API_URI='${GRAPHQL_API_URI}'
+      - APP_URI='http://localhost:3000'

@@ -27,7 +27,7 @@ import {
   CardTitle,
   Container,
   Row,
-  Col
+  Col,
 } from "reactstrap";
 
 class CardsHeader extends React.Component {
@@ -47,12 +47,12 @@ class CardsHeader extends React.Component {
                     listClassName="breadcrumb-links breadcrumb-dark"
                   >
                     <BreadcrumbItem>
-                      <a href="#pablo" onClick={e => e.preventDefault()}>
+                      <a href="#pablo" onClick={(e) => e.preventDefault()}>
                         <i className="fas fa-home" />
                       </a>
                     </BreadcrumbItem>
                     <BreadcrumbItem>
-                      <a href="#pablo" onClick={e => e.preventDefault()}>
+                      <a href="#pablo" onClick={(e) => e.preventDefault()}>
                         {this.props.parentName}
                       </a>
                     </BreadcrumbItem>
@@ -66,7 +66,7 @@ class CardsHeader extends React.Component {
                     className="btn-neutral"
                     color="default"
                     href="#pablo"
-                    onClick={e => e.preventDefault()}
+                    onClick={(e) => e.preventDefault()}
                     size="sm"
                   >
                     New
@@ -75,7 +75,7 @@ class CardsHeader extends React.Component {
                     className="btn-neutral"
                     color="default"
                     href="#pablo"
-                    onClick={e => e.preventDefault()}
+                    onClick={(e) => e.preventDefault()}
                     size="sm"
                   >
                     Filters
@@ -213,7 +213,7 @@ class CardsHeader extends React.Component {
 
 CardsHeader.propTypes = {
   name: PropTypes.string,
-  parentName: PropTypes.string
+  parentName: PropTypes.string,
 };
 
 export default CardsHeader;

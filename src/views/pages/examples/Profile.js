@@ -32,10 +32,10 @@ import {
   Progress,
   Container,
   Row,
-  Col
+  Col,
 } from "reactstrap";
 // core components
-import ProfileHeader from "components/Headers/ProfileHeader.js";
+import ProfileHeader from "components/headers/ProfileHeader.js";
 
 class Profile extends React.Component {
   render() {
@@ -54,7 +54,7 @@ class Profile extends React.Component {
                 <Row className="justify-content-center">
                   <Col className="order-lg-2" lg="3">
                     <div className="card-profile-image">
-                      <a href="#pablo" onClick={e => e.preventDefault()}>
+                      <a href="#pablo" onClick={(e) => e.preventDefault()}>
                         <img
                           alt="..."
                           className="rounded-circle"
@@ -70,7 +70,7 @@ class Profile extends React.Component {
                       className="mr-4"
                       color="info"
                       href="#pablo"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                       size="sm"
                     >
                       Connect
@@ -79,7 +79,7 @@ class Profile extends React.Component {
                       className="float-right"
                       color="default"
                       href="#pablo"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                       size="sm"
                     >
                       Message
@@ -139,7 +139,7 @@ class Profile extends React.Component {
                           <a
                             className="avatar rounded-circle"
                             href="#pablo"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -164,7 +164,7 @@ class Profile extends React.Component {
                           <a
                             className="avatar rounded-circle"
                             href="#pablo"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -189,7 +189,7 @@ class Profile extends React.Component {
                           <a
                             className="avatar rounded-circle"
                             href="#pablo"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -214,7 +214,7 @@ class Profile extends React.Component {
                           <a
                             className="avatar rounded-circle"
                             href="#pablo"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -239,7 +239,7 @@ class Profile extends React.Component {
                           <a
                             className="avatar rounded-circle"
                             href="#pablo"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -338,7 +338,7 @@ class Profile extends React.Component {
                       <Button
                         color="primary"
                         href="#pablo"
-                        onClick={e => e.preventDefault()}
+                        onClick={(e) => e.preventDefault()}
                         size="sm"
                       >
                         Settings

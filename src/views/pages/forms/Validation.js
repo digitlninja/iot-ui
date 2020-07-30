@@ -31,10 +31,10 @@ import {
   InputGroup,
   Container,
   Row,
-  Col
+  Col,
 } from "reactstrap";
 // core components
-import SimpleHeader from "components/Headers/SimpleHeader.js";
+import SimpleHeader from "components/headers/SimpleHeader.js";
 
 class Validation extends React.Component {
   state = {
@@ -52,8 +52,8 @@ class Validation extends React.Component {
       zip: "",
       zipState: null,
       checkbox: false,
-      checkboxState: null
-    }
+      checkboxState: null,
+    },
   };
   validateCustomStylesForm = () => {
     let newState = this.state.customStyles;
@@ -93,7 +93,7 @@ class Validation extends React.Component {
       newState.checkboxState = "valid";
     }
     this.setState({
-      customStyles: newState
+      customStyles: newState,
     });
   };
   customStylesForm = (e, stateName) => {
@@ -113,7 +113,7 @@ class Validation extends React.Component {
       }
     }
     this.setState({
-      customStyles: newState
+      customStyles: newState,
     });
   };
   render() {
@@ -166,7 +166,7 @@ class Validation extends React.Component {
                               this.state.customStyles.firstNameState ===
                               "invalid"
                             }
-                            onChange={e =>
+                            onChange={(e) =>
                               this.customStylesForm(e, "firstName")
                             }
                           />
@@ -191,7 +191,9 @@ class Validation extends React.Component {
                               this.state.customStyles.lastNameState ===
                               "invalid"
                             }
-                            onChange={e => this.customStylesForm(e, "lastName")}
+                            onChange={(e) =>
+                              this.customStylesForm(e, "lastName")
+                            }
                           />
                           <div className="valid-feedback">Looks good!</div>
                         </Col>
@@ -214,7 +216,9 @@ class Validation extends React.Component {
                               this.state.customStyles.usernameState ===
                               "invalid"
                             }
-                            onChange={e => this.customStylesForm(e, "username")}
+                            onChange={(e) =>
+                              this.customStylesForm(e, "username")
+                            }
                           />
                           <div className="invalid-feedback">
                             Please choose a username.
@@ -239,7 +243,7 @@ class Validation extends React.Component {
                             invalid={
                               this.state.customStyles.cityState === "invalid"
                             }
-                            onChange={e => this.customStylesForm(e, "city")}
+                            onChange={(e) => this.customStylesForm(e, "city")}
                           />
                           <div className="invalid-feedback">
                             Please provide a valid city.
@@ -262,7 +266,7 @@ class Validation extends React.Component {
                             invalid={
                               this.state.customStyles.stateState === "invalid"
                             }
-                            onChange={e => this.customStylesForm(e, "state")}
+                            onChange={(e) => this.customStylesForm(e, "state")}
                           />
                           <div className="invalid-feedback">
                             Please provide a valid state.
@@ -283,7 +287,7 @@ class Validation extends React.Component {
                             invalid={
                               this.state.customStyles.zipState === "invalid"
                             }
-                            onChange={e => this.customStylesForm(e, "zip")}
+                            onChange={(e) => this.customStylesForm(e, "zip")}
                           />
                           <div className="invalid-feedback">
                             Please provide a valid zip.
@@ -304,7 +308,9 @@ class Validation extends React.Component {
                               this.state.customStyles.checkboxState ===
                               "invalid"
                             ).toString()}
-                            onChange={e => this.customStylesForm(e, "checkbox")}
+                            onChange={(e) =>
+                              this.customStylesForm(e, "checkbox")
+                            }
                           />
                           <label
                             className="custom-control-label"
@@ -390,7 +396,7 @@ class Validation extends React.Component {
                         <Col className="mb-3" md="4">
                           <FormGroup
                             className={classnames({
-                              focused: this.state.focused
+                              focused: this.state.focused,
                             })}
                           >
                             <label

@@ -30,7 +30,7 @@ class ProfileHeader extends React.Component {
             backgroundImage:
               'url("' + require("assets/img/theme/profile-cover.jpg") + '")',
             backgroundSize: "cover",
-            backgroundPosition: "center top"
+            backgroundPosition: "center top",
           }}
         >
           <span className="mask bg-gradient-info opacity-8" />
@@ -47,7 +47,7 @@ class ProfileHeader extends React.Component {
                   className="btn-neutral"
                   color="default"
                   href="#pablo"
-                  onClick={e => e.preventDefault()}
+                  onClick={(e) => e.preventDefault()}
                 >
                   تعديل الملف الشخصي
                 </Button>

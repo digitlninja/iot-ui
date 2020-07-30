@@ -3,8 +3,8 @@ import React from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
 
 // core components
-import AuthNavbar from "components/Navbars/AuthNavbar.js";
-import AuthFooter from "components/Footers/AuthFooter.js";
+import AuthNavbar from "components/navbars/AuthNavbar.js";
+import AuthFooter from "components/footers/AuthFooter.js";
 
 import routes from "routes.js";
 
@@ -31,7 +31,13 @@ class Auth extends React.Component {
         return this.getRoutes(prop.views);
       }
       if (prop.layout === "/auth") {
-        return <Route path={prop.layout + prop.path} component={prop.component} key={key} />;
+        return (
+          <Route
+            path={prop.layout + prop.path}
+            component={prop.component}
+            key={key}
+          />
+        );
       } else {
         return null;
       }

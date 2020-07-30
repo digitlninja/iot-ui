@@ -36,10 +36,10 @@ import {
   Container,
   Row,
   Col,
-  UncontrolledTooltip
+  UncontrolledTooltip,
 } from "reactstrap";
 // core components
-import SimpleHeader from "components/Headers/SimpleHeader.js";
+import SimpleHeader from "components/headers/SimpleHeader.js";
 
 class Tables extends React.Component {
   render() {
@@ -80,7 +80,7 @@ class Tables extends React.Component {
                           <a
                             className="avatar rounded-circle mr-3"
                             href="#pablo"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -107,7 +107,7 @@ class Tables extends React.Component {
                             className="avatar avatar-sm rounded-circle"
                             href="#pablo"
                             id="tooltip160923422"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -124,7 +124,7 @@ class Tables extends React.Component {
                             className="avatar avatar-sm rounded-circle"
                             href="#pablo"
                             id="tooltip514211229"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -141,7 +141,7 @@ class Tables extends React.Component {
                             className="avatar avatar-sm rounded-circle"
                             href="#pablo"
                             id="tooltip726857513"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -158,7 +158,7 @@ class Tables extends React.Component {
                             className="avatar avatar-sm rounded-circle"
                             href="#pablo"
                             id="tooltip469193676"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -194,19 +194,19 @@ class Tables extends React.Component {
                           <DropdownMenu className="dropdown-menu-arrow" right>
                             <DropdownItem
                               href="#pablo"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               Action
                             </DropdownItem>
                             <DropdownItem
                               href="#pablo"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               Another action
                             </DropdownItem>
                             <DropdownItem
                               href="#pablo"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               Something else here
                             </DropdownItem>
@@ -220,7 +220,7 @@ class Tables extends React.Component {
                           <a
                             className="avatar rounded-circle mr-3"
                             href="#pablo"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -247,7 +247,7 @@ class Tables extends React.Component {
                             className="avatar avatar-sm rounded-circle"
                             href="#pablo"
                             id="tooltip31874212"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -264,7 +264,7 @@ class Tables extends React.Component {
                             className="avatar avatar-sm rounded-circle"
                             href="#pablo"
                             id="tooltip252827779"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -281,7 +281,7 @@ class Tables extends React.Component {
                             className="avatar avatar-sm rounded-circle"
                             href="#pablo"
                             id="tooltip809957233"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -298,7 +298,7 @@ class Tables extends React.Component {
                             className="avatar avatar-sm rounded-circle"
                             href="#pablo"
                             id="tooltip979845150"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -334,19 +334,19 @@ class Tables extends React.Component {
                           <DropdownMenu className="dropdown-menu-arrow" right>
                             <DropdownItem
                               href="#pablo"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               Action
                             </DropdownItem>
                             <DropdownItem
                               href="#pablo"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               Another action
                             </DropdownItem>
                             <DropdownItem
                               href="#pablo"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               Something else here
                             </DropdownItem>
@@ -360,7 +360,7 @@ class Tables extends React.Component {
                           <a
                             className="avatar rounded-circle mr-3"
                             href="#pablo"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -387,7 +387,7 @@ class Tables extends React.Component {
                             className="avatar avatar-sm rounded-circle"
                             href="#pablo"
                             id="tooltip728862912"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -404,7 +404,7 @@ class Tables extends React.Component {
                             className="avatar avatar-sm rounded-circle"
                             href="#pablo"
                             id="tooltip578670996"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -421,7 +421,7 @@ class Tables extends React.Component {
                             className="avatar avatar-sm rounded-circle"
                             href="#pablo"
                             id="tooltip890233574"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -438,7 +438,7 @@ class Tables extends React.Component {
                             className="avatar avatar-sm rounded-circle"
                             href="#pablo"
                             id="tooltip681662370"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -474,19 +474,19 @@ class Tables extends React.Component {
                           <DropdownMenu className="dropdown-menu-arrow" right>
                             <DropdownItem
                               href="#pablo"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               Action
                             </DropdownItem>
                             <DropdownItem
                               href="#pablo"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               Another action
                             </DropdownItem>
                             <DropdownItem
                               href="#pablo"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               Something else here
                             </DropdownItem>
@@ -500,7 +500,7 @@ class Tables extends React.Component {
                           <a
                             className="avatar rounded-circle mr-3"
                             href="#pablo"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -527,7 +527,7 @@ class Tables extends React.Component {
                             className="avatar avatar-sm rounded-circle"
                             href="#pablo"
                             id="tooltip972725183"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -544,7 +544,7 @@ class Tables extends React.Component {
                             className="avatar avatar-sm rounded-circle"
                             href="#pablo"
                             id="tooltip74486040"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -561,7 +561,7 @@ class Tables extends React.Component {
                             className="avatar avatar-sm rounded-circle"
                             href="#pablo"
                             id="tooltip650279481"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -578,7 +578,7 @@ class Tables extends React.Component {
                             className="avatar avatar-sm rounded-circle"
                             href="#pablo"
                             id="tooltip228854968"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -614,19 +614,19 @@ class Tables extends React.Component {
                           <DropdownMenu className="dropdown-menu-arrow" right>
                             <DropdownItem
                               href="#pablo"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               Action
                             </DropdownItem>
                             <DropdownItem
                               href="#pablo"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               Another action
                             </DropdownItem>
                             <DropdownItem
                               href="#pablo"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               Something else here
                             </DropdownItem>
@@ -640,7 +640,7 @@ class Tables extends React.Component {
                           <a
                             className="avatar rounded-circle mr-3"
                             href="#pablo"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -667,7 +667,7 @@ class Tables extends React.Component {
                             className="avatar avatar-sm rounded-circle"
                             href="#pablo"
                             id="tooltip450658649"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -684,7 +684,7 @@ class Tables extends React.Component {
                             className="avatar avatar-sm rounded-circle"
                             href="#pablo"
                             id="tooltip66804543"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -701,7 +701,7 @@ class Tables extends React.Component {
                             className="avatar avatar-sm rounded-circle"
                             href="#pablo"
                             id="tooltip897599395"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -718,7 +718,7 @@ class Tables extends React.Component {
                             className="avatar avatar-sm rounded-circle"
                             href="#pablo"
                             id="tooltip207249319"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -754,19 +754,19 @@ class Tables extends React.Component {
                           <DropdownMenu className="dropdown-menu-arrow" right>
                             <DropdownItem
                               href="#pablo"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               Action
                             </DropdownItem>
                             <DropdownItem
                               href="#pablo"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               Another action
                             </DropdownItem>
                             <DropdownItem
                               href="#pablo"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               Something else here
                             </DropdownItem>
@@ -786,7 +786,7 @@ class Tables extends React.Component {
                       <PaginationItem className="disabled">
                         <PaginationLink
                           href="#pablo"
-                          onClick={e => e.preventDefault()}
+                          onClick={(e) => e.preventDefault()}
                           tabIndex="-1"
                         >
                           <i className="fas fa-angle-left" />
@@ -796,7 +796,7 @@ class Tables extends React.Component {
                       <PaginationItem className="active">
                         <PaginationLink
                           href="#pablo"
-                          onClick={e => e.preventDefault()}
+                          onClick={(e) => e.preventDefault()}
                         >
                           1
                         </PaginationLink>
@@ -804,7 +804,7 @@ class Tables extends React.Component {
                       <PaginationItem>
                         <PaginationLink
                           href="#pablo"
-                          onClick={e => e.preventDefault()}
+                          onClick={(e) => e.preventDefault()}
                         >
                           2 <span className="sr-only">(current)</span>
                         </PaginationLink>
@@ -812,7 +812,7 @@ class Tables extends React.Component {
                       <PaginationItem>
                         <PaginationLink
                           href="#pablo"
-                          onClick={e => e.preventDefault()}
+                          onClick={(e) => e.preventDefault()}
                         >
                           3
                         </PaginationLink>
@@ -820,7 +820,7 @@ class Tables extends React.Component {
                       <PaginationItem>
                         <PaginationLink
                           href="#pablo"
-                          onClick={e => e.preventDefault()}
+                          onClick={(e) => e.preventDefault()}
                         >
                           <i className="fas fa-angle-right" />
                           <span className="sr-only">Next</span>
@@ -844,7 +844,7 @@ class Tables extends React.Component {
                     color="default"
                     href="#pablo"
                     id="tooltip969372949"
-                    onClick={e => e.preventDefault()}
+                    onClick={(e) => e.preventDefault()}
                     size="sm"
                   >
                     <span className="btn-inner--icon mr-1">
@@ -885,7 +885,7 @@ class Tables extends React.Component {
                     <a
                       className="font-weight-bold"
                       href="#pablo"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       Argon Dashboard PRO
                     </a>
@@ -895,7 +895,7 @@ class Tables extends React.Component {
                       className="table-action"
                       href="#pablo"
                       id="tooltip564981685"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       <i className="fas fa-user-edit" />
                     </a>
@@ -906,7 +906,7 @@ class Tables extends React.Component {
                       className="table-action table-action-delete"
                       href="#pablo"
                       id="tooltip601065234"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       <i className="fas fa-trash" />
                     </a>
@@ -931,7 +931,7 @@ class Tables extends React.Component {
                     <a
                       className="font-weight-bold"
                       href="#pablo"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       Argon Design System
                     </a>
@@ -941,7 +941,7 @@ class Tables extends React.Component {
                       className="table-action"
                       href="#pablo"
                       id="tooltip123539273"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       <i className="fas fa-user-edit" />
                     </a>
@@ -952,7 +952,7 @@ class Tables extends React.Component {
                       className="table-action table-action-delete"
                       href="#pablo"
                       id="tooltip397466356"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       <i className="fas fa-trash" />
                     </a>
@@ -977,7 +977,7 @@ class Tables extends React.Component {
                     <a
                       className="font-weight-bold"
                       href="#pablo"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       Black Dashboard
                     </a>
@@ -987,7 +987,7 @@ class Tables extends React.Component {
                       className="table-action"
                       href="#pablo"
                       id="tooltip968903465"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       <i className="fas fa-user-edit" />
                     </a>
@@ -998,7 +998,7 @@ class Tables extends React.Component {
                       className="table-action table-action-delete"
                       href="#pablo"
                       id="tooltip161447542"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       <i className="fas fa-trash" />
                     </a>
@@ -1023,7 +1023,7 @@ class Tables extends React.Component {
                     <a
                       className="font-weight-bold"
                       href="#pablo"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       Argon Dashboard PRO
                     </a>
@@ -1033,7 +1033,7 @@ class Tables extends React.Component {
                       className="table-action"
                       href="#pablo"
                       id="tooltip874640709"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       <i className="fas fa-user-edit" />
                     </a>
@@ -1044,7 +1044,7 @@ class Tables extends React.Component {
                       className="table-action table-action-delete"
                       href="#pablo"
                       id="tooltip598568751"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       <i className="fas fa-trash" />
                     </a>
@@ -1069,7 +1069,7 @@ class Tables extends React.Component {
                     <a
                       className="font-weight-bold"
                       href="#pablo"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       Argon Dashboard PRO
                     </a>
@@ -1079,7 +1079,7 @@ class Tables extends React.Component {
                       className="table-action"
                       href="#pablo"
                       id="tooltip400574648"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       <i className="fas fa-user-edit" />
                     </a>
@@ -1090,7 +1090,7 @@ class Tables extends React.Component {
                       className="table-action table-action-delete"
                       href="#pablo"
                       id="tooltip573554853"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       <i className="fas fa-trash" />
                     </a>
@@ -1114,7 +1114,7 @@ class Tables extends React.Component {
                     color="primary"
                     href="#pablo"
                     id="tooltip443412080"
-                    onClick={e => e.preventDefault()}
+                    onClick={(e) => e.preventDefault()}
                     size="sm"
                   >
                     <span className="btn-inner--icon mr-1">
@@ -1159,7 +1159,7 @@ class Tables extends React.Component {
                     <a
                       className="font-weight-bold"
                       href="#pablo"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       Argon Dashboard PRO
                     </a>
@@ -1169,7 +1169,7 @@ class Tables extends React.Component {
                       className="table-action"
                       href="#pablo"
                       id="tooltip209424781"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       <i className="fas fa-user-edit" />
                     </a>
@@ -1180,7 +1180,7 @@ class Tables extends React.Component {
                       className="table-action table-action-delete"
                       href="#pablo"
                       id="tooltip12475020"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       <i className="fas fa-trash" />
                     </a>
@@ -1205,7 +1205,7 @@ class Tables extends React.Component {
                     <a
                       className="font-weight-bold"
                       href="#pablo"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       Argon Design System
                     </a>
@@ -1215,7 +1215,7 @@ class Tables extends React.Component {
                       className="table-action"
                       href="#pablo"
                       id="tooltip183793484"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       <i className="fas fa-user-edit" />
                     </a>
@@ -1226,7 +1226,7 @@ class Tables extends React.Component {
                       className="table-action table-action-delete"
                       href="#pablo"
                       id="tooltip287066670"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       <i className="fas fa-trash" />
                     </a>
@@ -1251,7 +1251,7 @@ class Tables extends React.Component {
                     <a
                       className="font-weight-bold"
                       href="#pablo"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       Black Dashboard
                     </a>
@@ -1261,7 +1261,7 @@ class Tables extends React.Component {
                       className="table-action"
                       href="#pablo"
                       id="tooltip978979647"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       <i className="fas fa-user-edit" />
                     </a>
@@ -1272,7 +1272,7 @@ class Tables extends React.Component {
                       className="table-action table-action-delete"
                       href="#pablo"
                       id="tooltip664113958"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       <i className="fas fa-trash" />
                     </a>
@@ -1297,7 +1297,7 @@ class Tables extends React.Component {
                     <a
                       className="font-weight-bold"
                       href="#pablo"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       Argon Dashboard PRO
                     </a>
@@ -1307,7 +1307,7 @@ class Tables extends React.Component {
                       className="table-action"
                       href="#pablo"
                       id="tooltip695575450"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       <i className="fas fa-user-edit" />
                     </a>
@@ -1318,7 +1318,7 @@ class Tables extends React.Component {
                       className="table-action table-action-delete"
                       href="#pablo"
                       id="tooltip801413251"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       <i className="fas fa-trash" />
                     </a>
@@ -1343,7 +1343,7 @@ class Tables extends React.Component {
                     <a
                       className="font-weight-bold"
                       href="#pablo"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       Argon Dashboard PRO
                     </a>
@@ -1353,7 +1353,7 @@ class Tables extends React.Component {
                       className="table-action"
                       href="#pablo"
                       id="tooltip569239376"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       <i className="fas fa-user-edit" />
                     </a>
@@ -1364,7 +1364,7 @@ class Tables extends React.Component {
                       className="table-action table-action-delete"
                       href="#pablo"
                       id="tooltip707667680"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       <i className="fas fa-trash" />
                     </a>
@@ -1388,7 +1388,7 @@ class Tables extends React.Component {
                     color="danger"
                     href="#pablo"
                     id="tooltip28070728"
-                    onClick={e => e.preventDefault()}
+                    onClick={(e) => e.preventDefault()}
                     size="sm"
                   >
                     <span className="btn-inner--icon mr-1">
@@ -1450,7 +1450,7 @@ class Tables extends React.Component {
                     <a
                       className="font-weight-bold"
                       href="#pablo"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       Argon Dashboard PRO
                     </a>
@@ -1490,7 +1490,7 @@ class Tables extends React.Component {
                     <a
                       className="font-weight-bold"
                       href="#pablo"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       Argon Design System
                     </a>
@@ -1530,7 +1530,7 @@ class Tables extends React.Component {
                     <a
                       className="font-weight-bold"
                       href="#pablo"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       Black Dashboard
                     </a>
@@ -1570,7 +1570,7 @@ class Tables extends React.Component {
                     <a
                       className="font-weight-bold"
                       href="#pablo"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       Argon Dashboard PRO
                     </a>
@@ -1610,7 +1610,7 @@ class Tables extends React.Component {
                     <a
                       className="font-weight-bold"
                       href="#pablo"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       Argon Dashboard PRO
                     </a>
@@ -1641,7 +1641,7 @@ class Tables extends React.Component {
                     color="danger"
                     href="#pablo"
                     id="tooltip163216539"
-                    onClick={e => e.preventDefault()}
+                    onClick={(e) => e.preventDefault()}
                     size="sm"
                   >
                     <span className="btn-inner--icon mr-1">
@@ -1703,7 +1703,7 @@ class Tables extends React.Component {
                     <a
                       className="font-weight-bold"
                       href="#pablo"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       Argon Dashboard PRO
                     </a>
@@ -1743,7 +1743,7 @@ class Tables extends React.Component {
                     <a
                       className="font-weight-bold"
                       href="#pablo"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       Argon Design System
                     </a>
@@ -1783,7 +1783,7 @@ class Tables extends React.Component {
                     <a
                       className="font-weight-bold"
                       href="#pablo"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       Black Dashboard
                     </a>
@@ -1823,7 +1823,7 @@ class Tables extends React.Component {
                     <a
                       className="font-weight-bold"
                       href="#pablo"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       Argon Dashboard PRO
                     </a>
@@ -1863,7 +1863,7 @@ class Tables extends React.Component {
                     <a
                       className="font-weight-bold"
                       href="#pablo"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       Argon Dashboard PRO
                     </a>
@@ -1913,7 +1913,7 @@ class Tables extends React.Component {
                       <a
                         className="avatar rounded-circle mr-3"
                         href="#pablo"
-                        onClick={e => e.preventDefault()}
+                        onClick={(e) => e.preventDefault()}
                       >
                         <img
                           alt="..."
@@ -1940,7 +1940,7 @@ class Tables extends React.Component {
                         className="avatar avatar-sm rounded-circle"
                         href="#pablo"
                         id="tooltip715349713"
-                        onClick={e => e.preventDefault()}
+                        onClick={(e) => e.preventDefault()}
                       >
                         <img
                           alt="..."
@@ -1954,7 +1954,7 @@ class Tables extends React.Component {
                         className="avatar avatar-sm rounded-circle"
                         href="#pablo"
                         id="tooltip852299360"
-                        onClick={e => e.preventDefault()}
+                        onClick={(e) => e.preventDefault()}
                       >
                         <img
                           alt="..."
@@ -1968,7 +1968,7 @@ class Tables extends React.Component {
                         className="avatar avatar-sm rounded-circle"
                         href="#pablo"
                         id="tooltip333095755"
-                        onClick={e => e.preventDefault()}
+                        onClick={(e) => e.preventDefault()}
                       >
                         <img
                           alt="..."
@@ -1982,7 +1982,7 @@ class Tables extends React.Component {
                         className="avatar avatar-sm rounded-circle"
                         href="#pablo"
                         id="tooltip917841216"
-                        onClick={e => e.preventDefault()}
+                        onClick={(e) => e.preventDefault()}
                       >
                         <img
                           alt="..."
@@ -2015,19 +2015,19 @@ class Tables extends React.Component {
                       <DropdownMenu className="dropdown-menu-arrow" right>
                         <DropdownItem
                           href="#pablo"
-                          onClick={e => e.preventDefault()}
+                          onClick={(e) => e.preventDefault()}
                         >
                           Action
                         </DropdownItem>
                         <DropdownItem
                           href="#pablo"
-                          onClick={e => e.preventDefault()}
+                          onClick={(e) => e.preventDefault()}
                         >
                           Another action
                         </DropdownItem>
                         <DropdownItem
                           href="#pablo"
-                          onClick={e => e.preventDefault()}
+                          onClick={(e) => e.preventDefault()}
                         >
                           Something else here
                         </DropdownItem>
@@ -2041,7 +2041,7 @@ class Tables extends React.Component {
                       <a
                         className="avatar rounded-circle mr-3"
                         href="#pablo"
-                        onClick={e => e.preventDefault()}
+                        onClick={(e) => e.preventDefault()}
                       >
                         <img
                           alt="..."
@@ -2068,7 +2068,7 @@ class Tables extends React.Component {
                         className="avatar avatar-sm rounded-circle"
                         href="#pablo"
                         id="tooltip345778553"
-                        onClick={e => e.preventDefault()}
+                        onClick={(e) => e.preventDefault()}
                       >
                         <img
                           alt="..."
@@ -2082,7 +2082,7 @@ class Tables extends React.Component {
                         className="avatar avatar-sm rounded-circle"
                         href="#pablo"
                         id="tooltip847386767"
-                        onClick={e => e.preventDefault()}
+                        onClick={(e) => e.preventDefault()}
                       >
                         <img
                           alt="..."
@@ -2096,7 +2096,7 @@ class Tables extends React.Component {
                         className="avatar avatar-sm rounded-circle"
                         href="#pablo"
                         id="tooltip759583934"
-                        onClick={e => e.preventDefault()}
+                        onClick={(e) => e.preventDefault()}
                       >
                         <img
                           alt="..."
@@ -2110,7 +2110,7 @@ class Tables extends React.Component {
                         className="avatar avatar-sm rounded-circle"
                         href="#pablo"
                         id="tooltip310037110"
-                        onClick={e => e.preventDefault()}
+                        onClick={(e) => e.preventDefault()}
                       >
                         <img
                           alt="..."
@@ -2143,19 +2143,19 @@ class Tables extends React.Component {
                       <DropdownMenu className="dropdown-menu-arrow" right>
                         <DropdownItem
                           href="#pablo"
-                          onClick={e => e.preventDefault()}
+                          onClick={(e) => e.preventDefault()}
                         >
                           Action
                         </DropdownItem>
                         <DropdownItem
                           href="#pablo"
-                          onClick={e => e.preventDefault()}
+                          onClick={(e) => e.preventDefault()}
                         >
                           Another action
                         </DropdownItem>
                         <DropdownItem
                           href="#pablo"
-                          onClick={e => e.preventDefault()}
+                          onClick={(e) => e.preventDefault()}
                         >
                           Something else here
                         </DropdownItem>
@@ -2169,7 +2169,7 @@ class Tables extends React.Component {
                       <a
                         className="avatar rounded-circle mr-3"
                         href="#pablo"
-                        onClick={e => e.preventDefault()}
+                        onClick={(e) => e.preventDefault()}
                       >
                         <img
                           alt="..."
@@ -2196,7 +2196,7 @@ class Tables extends React.Component {
                         className="avatar avatar-sm rounded-circle"
                         href="#pablo"
                         id="tooltip145549156"
-                        onClick={e => e.preventDefault()}
+                        onClick={(e) => e.preventDefault()}
                       >
                         <img
                           alt="..."
@@ -2210,7 +2210,7 @@ class Tables extends React.Component {
                         className="avatar avatar-sm rounded-circle"
                         href="#pablo"
                         id="tooltip250561822"
-                        onClick={e => e.preventDefault()}
+                        onClick={(e) => e.preventDefault()}
                       >
                         <img
                           alt="..."
@@ -2224,7 +2224,7 @@ class Tables extends React.Component {
                         className="avatar avatar-sm rounded-circle"
                         href="#pablo"
                         id="tooltip684500175"
-                        onClick={e => e.preventDefault()}
+                        onClick={(e) => e.preventDefault()}
                       >
                         <img
                           alt="..."
@@ -2238,7 +2238,7 @@ class Tables extends React.Component {
                         className="avatar avatar-sm rounded-circle"
                         href="#pablo"
                         id="tooltip82846147"
-                        onClick={e => e.preventDefault()}
+                        onClick={(e) => e.preventDefault()}
                       >
                         <img
                           alt="..."
@@ -2271,19 +2271,19 @@ class Tables extends React.Component {
                       <DropdownMenu className="dropdown-menu-arrow" right>
                         <DropdownItem
                           href="#pablo"
-                          onClick={e => e.preventDefault()}
+                          onClick={(e) => e.preventDefault()}
                         >
                           Action
                         </DropdownItem>
                         <DropdownItem
                           href="#pablo"
-                          onClick={e => e.preventDefault()}
+                          onClick={(e) => e.preventDefault()}
                         >
                           Another action
                         </DropdownItem>
                         <DropdownItem
                           href="#pablo"
-                          onClick={e => e.preventDefault()}
+                          onClick={(e) => e.preventDefault()}
                         >
                           Something else here
                         </DropdownItem>
@@ -2297,7 +2297,7 @@ class Tables extends React.Component {
                       <a
                         className="avatar rounded-circle mr-3"
                         href="#pablo"
-                        onClick={e => e.preventDefault()}
+                        onClick={(e) => e.preventDefault()}
                       >
                         <img
                           alt="..."
@@ -2324,7 +2324,7 @@ class Tables extends React.Component {
                         className="avatar avatar-sm rounded-circle"
                         href="#pablo"
                         id="tooltip763716067"
-                        onClick={e => e.preventDefault()}
+                        onClick={(e) => e.preventDefault()}
                       >
                         <img
                           alt="..."
@@ -2338,7 +2338,7 @@ class Tables extends React.Component {
                         className="avatar avatar-sm rounded-circle"
                         href="#pablo"
                         id="tooltip629596306"
-                        onClick={e => e.preventDefault()}
+                        onClick={(e) => e.preventDefault()}
                       >
                         <img
                           alt="..."
@@ -2352,7 +2352,7 @@ class Tables extends React.Component {
                         className="avatar avatar-sm rounded-circle"
                         href="#pablo"
                         id="tooltip973702792"
-                        onClick={e => e.preventDefault()}
+                        onClick={(e) => e.preventDefault()}
                       >
                         <img
                           alt="..."
@@ -2366,7 +2366,7 @@ class Tables extends React.Component {
                         className="avatar avatar-sm rounded-circle"
                         href="#pablo"
                         id="tooltip765231102"
-                        onClick={e => e.preventDefault()}
+                        onClick={(e) => e.preventDefault()}
                       >
                         <img
                           alt="..."
@@ -2399,19 +2399,19 @@ class Tables extends React.Component {
                       <DropdownMenu className="dropdown-menu-arrow" right>
                         <DropdownItem
                           href="#pablo"
-                          onClick={e => e.preventDefault()}
+                          onClick={(e) => e.preventDefault()}
                         >
                           Action
                         </DropdownItem>
                         <DropdownItem
                           href="#pablo"
-                          onClick={e => e.preventDefault()}
+                          onClick={(e) => e.preventDefault()}
                         >
                           Another action
                         </DropdownItem>
                         <DropdownItem
                           href="#pablo"
-                          onClick={e => e.preventDefault()}
+                          onClick={(e) => e.preventDefault()}
                         >
                           Something else here
                         </DropdownItem>
@@ -2425,7 +2425,7 @@ class Tables extends React.Component {
                       <a
                         className="avatar rounded-circle mr-3"
                         href="#pablo"
-                        onClick={e => e.preventDefault()}
+                        onClick={(e) => e.preventDefault()}
                       >
                         <img
                           alt="..."
@@ -2452,7 +2452,7 @@ class Tables extends React.Component {
                         className="avatar avatar-sm rounded-circle"
                         href="#pablo"
                         id="tooltip244510364"
-                        onClick={e => e.preventDefault()}
+                        onClick={(e) => e.preventDefault()}
                       >
                         <img
                           alt="..."
@@ -2466,7 +2466,7 @@ class Tables extends React.Component {
                         className="avatar avatar-sm rounded-circle"
                         href="#pablo"
                         id="tooltip651263728"
-                        onClick={e => e.preventDefault()}
+                        onClick={(e) => e.preventDefault()}
                       >
                         <img
                           alt="..."
@@ -2480,7 +2480,7 @@ class Tables extends React.Component {
                         className="avatar avatar-sm rounded-circle"
                         href="#pablo"
                         id="tooltip105516609"
-                        onClick={e => e.preventDefault()}
+                        onClick={(e) => e.preventDefault()}
                       >
                         <img
                           alt="..."
@@ -2494,7 +2494,7 @@ class Tables extends React.Component {
                         className="avatar avatar-sm rounded-circle"
                         href="#pablo"
                         id="tooltip765317415"
-                        onClick={e => e.preventDefault()}
+                        onClick={(e) => e.preventDefault()}
                       >
                         <img
                           alt="..."
@@ -2527,19 +2527,19 @@ class Tables extends React.Component {
                       <DropdownMenu className="dropdown-menu-arrow" right>
                         <DropdownItem
                           href="#pablo"
-                          onClick={e => e.preventDefault()}
+                          onClick={(e) => e.preventDefault()}
                         >
                           Action
                         </DropdownItem>
                         <DropdownItem
                           href="#pablo"
-                          onClick={e => e.preventDefault()}
+                          onClick={(e) => e.preventDefault()}
                         >
                           Another action
                         </DropdownItem>
                         <DropdownItem
                           href="#pablo"
-                          onClick={e => e.preventDefault()}
+                          onClick={(e) => e.preventDefault()}
                         >
                           Something else here
                         </DropdownItem>
@@ -2586,7 +2586,7 @@ class Tables extends React.Component {
                           <a
                             className="avatar rounded-circle mr-3"
                             href="#pablo"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -2613,7 +2613,7 @@ class Tables extends React.Component {
                             className="avatar avatar-sm rounded-circle"
                             href="#pablo"
                             id="tooltip914312677"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -2630,7 +2630,7 @@ class Tables extends React.Component {
                             className="avatar avatar-sm rounded-circle"
                             href="#pablo"
                             id="tooltip598826101"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -2647,7 +2647,7 @@ class Tables extends React.Component {
                             className="avatar avatar-sm rounded-circle"
                             href="#pablo"
                             id="tooltip513888794"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -2664,7 +2664,7 @@ class Tables extends React.Component {
                             className="avatar avatar-sm rounded-circle"
                             href="#pablo"
                             id="tooltip623852194"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -2700,19 +2700,19 @@ class Tables extends React.Component {
                           <DropdownMenu className="dropdown-menu-arrow" right>
                             <DropdownItem
                               href="#pablo"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               Action
                             </DropdownItem>
                             <DropdownItem
                               href="#pablo"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               Another action
                             </DropdownItem>
                             <DropdownItem
                               href="#pablo"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               Something else here
                             </DropdownItem>
@@ -2726,7 +2726,7 @@ class Tables extends React.Component {
                           <a
                             className="avatar rounded-circle mr-3"
                             href="#pablo"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -2753,7 +2753,7 @@ class Tables extends React.Component {
                             className="avatar avatar-sm rounded-circle"
                             href="#pablo"
                             id="tooltip618294410"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -2770,7 +2770,7 @@ class Tables extends React.Component {
                             className="avatar avatar-sm rounded-circle"
                             href="#pablo"
                             id="tooltip474050080"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -2787,7 +2787,7 @@ class Tables extends React.Component {
                             className="avatar avatar-sm rounded-circle"
                             href="#pablo"
                             id="tooltip410290934"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -2804,7 +2804,7 @@ class Tables extends React.Component {
                             className="avatar avatar-sm rounded-circle"
                             href="#pablo"
                             id="tooltip566837648"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -2840,19 +2840,19 @@ class Tables extends React.Component {
                           <DropdownMenu className="dropdown-menu-arrow" right>
                             <DropdownItem
                               href="#pablo"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               Action
                             </DropdownItem>
                             <DropdownItem
                               href="#pablo"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               Another action
                             </DropdownItem>
                             <DropdownItem
                               href="#pablo"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               Something else here
                             </DropdownItem>
@@ -2866,7 +2866,7 @@ class Tables extends React.Component {
                           <a
                             className="avatar rounded-circle mr-3"
                             href="#pablo"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -2893,7 +2893,7 @@ class Tables extends React.Component {
                             className="avatar avatar-sm rounded-circle"
                             href="#pablo"
                             id="tooltip623199212"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -2910,7 +2910,7 @@ class Tables extends React.Component {
                             className="avatar avatar-sm rounded-circle"
                             href="#pablo"
                             id="tooltip455324571"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -2927,7 +2927,7 @@ class Tables extends React.Component {
                             className="avatar avatar-sm rounded-circle"
                             href="#pablo"
                             id="tooltip260755125"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -2944,7 +2944,7 @@ class Tables extends React.Component {
                             className="avatar avatar-sm rounded-circle"
                             href="#pablo"
                             id="tooltip411542911"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -2980,19 +2980,19 @@ class Tables extends React.Component {
                           <DropdownMenu className="dropdown-menu-arrow" right>
                             <DropdownItem
                               href="#pablo"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               Action
                             </DropdownItem>
                             <DropdownItem
                               href="#pablo"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               Another action
                             </DropdownItem>
                             <DropdownItem
                               href="#pablo"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               Something else here
                             </DropdownItem>
@@ -3006,7 +3006,7 @@ class Tables extends React.Component {
                           <a
                             className="avatar rounded-circle mr-3"
                             href="#pablo"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -3033,7 +3033,7 @@ class Tables extends React.Component {
                             className="avatar avatar-sm rounded-circle"
                             href="#pablo"
                             id="tooltip588805720"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -3050,7 +3050,7 @@ class Tables extends React.Component {
                             className="avatar avatar-sm rounded-circle"
                             href="#pablo"
                             id="tooltip909993336"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -3067,7 +3067,7 @@ class Tables extends React.Component {
                             className="avatar avatar-sm rounded-circle"
                             href="#pablo"
                             id="tooltip159728285"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -3084,7 +3084,7 @@ class Tables extends React.Component {
                             className="avatar avatar-sm rounded-circle"
                             href="#pablo"
                             id="tooltip155983421"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -3120,19 +3120,19 @@ class Tables extends React.Component {
                           <DropdownMenu className="dropdown-menu-arrow" right>
                             <DropdownItem
                               href="#pablo"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               Action
                             </DropdownItem>
                             <DropdownItem
                               href="#pablo"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               Another action
                             </DropdownItem>
                             <DropdownItem
                               href="#pablo"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               Something else here
                             </DropdownItem>
@@ -3146,7 +3146,7 @@ class Tables extends React.Component {
                           <a
                             className="avatar rounded-circle mr-3"
                             href="#pablo"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -3173,7 +3173,7 @@ class Tables extends React.Component {
                             className="avatar avatar-sm rounded-circle"
                             href="#pablo"
                             id="tooltip790883729"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -3190,7 +3190,7 @@ class Tables extends React.Component {
                             className="avatar avatar-sm rounded-circle"
                             href="#pablo"
                             id="tooltip71467481"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -3207,7 +3207,7 @@ class Tables extends React.Component {
                             className="avatar avatar-sm rounded-circle"
                             href="#pablo"
                             id="tooltip70486707"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -3224,7 +3224,7 @@ class Tables extends React.Component {
                             className="avatar avatar-sm rounded-circle"
                             href="#pablo"
                             id="tooltip651611801"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -3260,19 +3260,19 @@ class Tables extends React.Component {
                           <DropdownMenu className="dropdown-menu-arrow" right>
                             <DropdownItem
                               href="#pablo"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               Action
                             </DropdownItem>
                             <DropdownItem
                               href="#pablo"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               Another action
                             </DropdownItem>
                             <DropdownItem
                               href="#pablo"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               Something else here
                             </DropdownItem>

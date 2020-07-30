@@ -23,7 +23,7 @@ import {
   Button,
   Container,
   Row,
-  Col
+  Col,
 } from "reactstrap";
 
 class AlternativeHeader extends React.Component {
@@ -41,12 +41,12 @@ class AlternativeHeader extends React.Component {
                     listClassName="breadcrumb-links"
                   >
                     <BreadcrumbItem>
-                      <a href="#pablo" onClick={e => e.preventDefault()}>
+                      <a href="#pablo" onClick={(e) => e.preventDefault()}>
                         <i className="fas fa-home" />
                       </a>
                     </BreadcrumbItem>
                     <BreadcrumbItem>
-                      <a href="#pablo" onClick={e => e.preventDefault()}>
+                      <a href="#pablo" onClick={(e) => e.preventDefault()}>
                         Dashboards
                       </a>
                     </BreadcrumbItem>
@@ -60,7 +60,7 @@ class AlternativeHeader extends React.Component {
                     className="btn-neutral"
                     color=""
                     href="#pablo"
-                    onClick={e => e.preventDefault()}
+                    onClick={(e) => e.preventDefault()}
                     size="sm"
                   >
                     New
@@ -69,7 +69,7 @@ class AlternativeHeader extends React.Component {
                     className="btn-neutral"
                     color=""
                     href="#pablo"
-                    onClick={e => e.preventDefault()}
+                    onClick={(e) => e.preventDefault()}
                     size="sm"
                   >
                     Filters

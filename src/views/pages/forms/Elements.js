@@ -26,10 +26,10 @@ import {
   Input,
   Container,
   Row,
-  Col
+  Col,
 } from "reactstrap";
 // core components
-import SimpleHeader from "components/Headers/SimpleHeader.js";
+import SimpleHeader from "components/headers/SimpleHeader.js";
 
 class Elements extends React.Component {
   render() {

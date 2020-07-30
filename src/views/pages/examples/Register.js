@@ -31,10 +31,10 @@ import {
   InputGroup,
   Container,
   Row,
-  Col
+  Col,
 } from "reactstrap";
 // core components
-import AuthHeader from "components/Headers/AuthHeader.js";
+import AuthHeader from "components/headers/AuthHeader.js";
 
 class Register extends React.Component {
   state = {};
@@ -58,7 +58,7 @@ class Register extends React.Component {
                       className="btn-neutral btn-icon mr-4"
                       color="default"
                       href="#pablo"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       <span className="btn-inner--icon mr-1">
                         <img
@@ -72,7 +72,7 @@ class Register extends React.Component {
                       className="btn-neutral btn-icon"
                       color="default"
                       href="#pablo"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       <span className="btn-inner--icon mr-1">
                         <img
@@ -91,7 +91,7 @@ class Register extends React.Component {
                   <Form role="form">
                     <FormGroup
                       className={classnames({
-                        focused: this.state.focusedName
+                        focused: this.state.focusedName,
                       })}
                     >
                       <InputGroup className="input-group-merge input-group-alternative mb-3">
@@ -110,7 +110,7 @@ class Register extends React.Component {
                     </FormGroup>
                     <FormGroup
                       className={classnames({
-                        focused: this.state.focusedEmail
+                        focused: this.state.focusedEmail,
                       })}
                     >
                       <InputGroup className="input-group-merge input-group-alternative mb-3">
@@ -129,7 +129,7 @@ class Register extends React.Component {
                     </FormGroup>
                     <FormGroup
                       className={classnames({
-                        focused: this.state.focusedPassword
+                        focused: this.state.focusedPassword,
                       })}
                     >
                       <InputGroup className="input-group-merge input-group-alternative">
@@ -174,7 +174,7 @@ class Register extends React.Component {
                               I agree with the{" "}
                               <a
                                 href="#pablo"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 Privacy Policy
                               </a>

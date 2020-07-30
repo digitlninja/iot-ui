@@ -44,10 +44,10 @@ import {
   Progress,
   Container,
   Row,
-  Col
+  Col,
 } from "reactstrap";
 // core components
-import CardsHeader from "components/Headers/CardsHeader.js";
+import CardsHeader from "components/headers/CardsHeader.js";
 
 import { widgetEvents } from "variables/general.js";
 
@@ -64,7 +64,7 @@ let mapData = {
   IN: 200,
   RO: 600,
   RU: 300,
-  US: 2920
+  US: 2920,
 };
 
 class Widgets extends React.Component {
@@ -77,7 +77,7 @@ class Widgets extends React.Component {
       selectable: true,
       selectHelper: true,
       editable: true,
-      events: widgetEvents
+      events: widgetEvents,
     });
     calendar.render();
   }
@@ -109,7 +109,7 @@ class Widgets extends React.Component {
                     className="px-0"
                     color="link"
                     href="#pablo"
-                    onClick={e => e.preventDefault()}
+                    onClick={(e) => e.preventDefault()}
                   >
                     View article
                   </Button>
@@ -141,7 +141,7 @@ class Widgets extends React.Component {
                           <a
                             className="avatar rounded-circle"
                             href="#pablo"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -151,7 +151,10 @@ class Widgets extends React.Component {
                         </Col>
                         <div className="col ml--2">
                           <h4 className="mb-0">
-                            <a href="#pablo" onClick={e => e.preventDefault()}>
+                            <a
+                              href="#pablo"
+                              onClick={(e) => e.preventDefault()}
+                            >
                               John Michael
                             </a>
                           </h4>
@@ -171,7 +174,7 @@ class Widgets extends React.Component {
                           <a
                             className="avatar rounded-circle"
                             href="#pablo"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -181,7 +184,10 @@ class Widgets extends React.Component {
                         </Col>
                         <div className="col ml--2">
                           <h4 className="mb-0">
-                            <a href="#pablo" onClick={e => e.preventDefault()}>
+                            <a
+                              href="#pablo"
+                              onClick={(e) => e.preventDefault()}
+                            >
                               Alex Smith
                             </a>
                           </h4>
@@ -201,7 +207,7 @@ class Widgets extends React.Component {
                           <a
                             className="avatar rounded-circle"
                             href="#pablo"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -211,7 +217,10 @@ class Widgets extends React.Component {
                         </Col>
                         <div className="col ml--2">
                           <h4 className="mb-0">
-                            <a href="#pablo" onClick={e => e.preventDefault()}>
+                            <a
+                              href="#pablo"
+                              onClick={(e) => e.preventDefault()}
+                            >
                               Samantha Ivy
                             </a>
                           </h4>
@@ -231,7 +240,7 @@ class Widgets extends React.Component {
                           <a
                             className="avatar rounded-circle"
                             href="#pablo"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -241,7 +250,10 @@ class Widgets extends React.Component {
                         </Col>
                         <div className="col ml--2">
                           <h4 className="mb-0">
-                            <a href="#pablo" onClick={e => e.preventDefault()}>
+                            <a
+                              href="#pablo"
+                              onClick={(e) => e.preventDefault()}
+                            >
                               John Michael
                             </a>
                           </h4>
@@ -261,7 +273,7 @@ class Widgets extends React.Component {
                           <a
                             className="avatar rounded-circle"
                             href="#pablo"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -271,7 +283,10 @@ class Widgets extends React.Component {
                         </Col>
                         <div className="col ml--2">
                           <h4 className="mb-0">
-                            <a href="#pablo" onClick={e => e.preventDefault()}>
+                            <a
+                              href="#pablo"
+                              onClick={(e) => e.preventDefault()}
+                            >
                               John Snow
                             </a>
                           </h4>
@@ -297,7 +312,7 @@ class Widgets extends React.Component {
                     <ListGroupItem
                       className="list-group-item-action flex-column align-items-start py-4 px-4"
                       href="#pablo"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                       tag="a"
                     >
                       <div className="d-flex w-100 justify-content-between">
@@ -324,7 +339,7 @@ class Widgets extends React.Component {
                     <ListGroupItem
                       className="list-group-item-action flex-column align-items-start py-4 px-4"
                       href="#pablo"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                       tag="a"
                     >
                       <div className="d-flex w-100 justify-content-between">
@@ -386,7 +401,7 @@ class Widgets extends React.Component {
                           className={classnames(
                             "input-group-alternative mb-3",
                             {
-                              focused: this.state.nameOnCard
+                              focused: this.state.nameOnCard,
                             }
                           )}
                         >
@@ -398,8 +413,8 @@ class Widgets extends React.Component {
                           <Input
                             placeholder="Name on card"
                             type="text"
-                            onFocus={e => this.setState({ nameOnCard: true })}
-                            onBlur={e => this.setState({ nameOnCard: false })}
+                            onFocus={(e) => this.setState({ nameOnCard: true })}
+                            onBlur={(e) => this.setState({ nameOnCard: false })}
                           />
                         </InputGroup>
                       </FormGroup>
@@ -408,7 +423,7 @@ class Widgets extends React.Component {
                           className={classnames(
                             "input-group-alternative mb-3",
                             {
-                              focused: this.state.cardNumber
+                              focused: this.state.cardNumber,
                             }
                           )}
                         >
@@ -420,8 +435,8 @@ class Widgets extends React.Component {
                           <Input
                             placeholder="Card number"
                             type="text"
-                            onFocus={e => this.setState({ cardNumber: true })}
-                            onBlur={e => this.setState({ cardNumber: false })}
+                            onFocus={(e) => this.setState({ cardNumber: true })}
+                            onBlur={(e) => this.setState({ cardNumber: false })}
                           />
                         </InputGroup>
                       </FormGroup>
@@ -432,7 +447,7 @@ class Widgets extends React.Component {
                               className={classnames(
                                 "input-group-alternative mb-3",
                                 {
-                                  focused: this.state.date
+                                  focused: this.state.date,
                                 }
                               )}
                             >
@@ -444,8 +459,8 @@ class Widgets extends React.Component {
                               <Input
                                 placeholder="MM/YY"
                                 type="text"
-                                onFocus={e => this.setState({ date: true })}
-                                onBlur={e => this.setState({ date: false })}
+                                onFocus={(e) => this.setState({ date: true })}
+                                onBlur={(e) => this.setState({ date: false })}
                               />
                             </InputGroup>
                           </FormGroup>
@@ -454,7 +469,7 @@ class Widgets extends React.Component {
                           <FormGroup>
                             <InputGroup
                               className={classnames("input-group-alternative", {
-                                focused: this.state.ccv
+                                focused: this.state.ccv,
                               })}
                             >
                               <InputGroupAddon addonType="prepend">
@@ -465,8 +480,8 @@ class Widgets extends React.Component {
                               <Input
                                 placeholder="CCV"
                                 type="text"
-                                onFocus={e => this.setState({ ccv: true })}
-                                onBlur={e => this.setState({ ccv: false })}
+                                onFocus={(e) => this.setState({ ccv: true })}
+                                onBlur={(e) => this.setState({ ccv: false })}
                               />
                             </InputGroup>
                           </FormGroup>
@@ -585,7 +600,7 @@ class Widgets extends React.Component {
                           <a
                             className="avatar rounded-circle"
                             href="#pablo"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -610,7 +625,7 @@ class Widgets extends React.Component {
                           <a
                             className="avatar rounded-circle"
                             href="#pablo"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -635,7 +650,7 @@ class Widgets extends React.Component {
                           <a
                             className="avatar rounded-circle"
                             href="#pablo"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -660,7 +675,7 @@ class Widgets extends React.Component {
                           <a
                             className="avatar rounded-circle"
                             href="#pablo"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -685,7 +700,7 @@ class Widgets extends React.Component {
                           <a
                             className="avatar rounded-circle"
                             href="#pablo"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -749,7 +764,7 @@ class Widgets extends React.Component {
                         className="btn-neutral"
                         color="default"
                         href="#pablo"
-                        onClick={e => e.preventDefault()}
+                        onClick={(e) => e.preventDefault()}
                         size="sm"
                       >
                         Action
@@ -762,7 +777,7 @@ class Widgets extends React.Component {
                     containerClassName="vector-map vector-map-sm"
                     containerStyle={{
                       width: "100%",
-                      height: "280px"
+                      height: "280px",
                     }}
                     map={"world_mill"}
                     zoomOnScroll={false}
@@ -777,74 +792,74 @@ class Widgets extends React.Component {
                         "fill-opacity": 0.8,
                         stroke: "none",
                         "stroke-width": 0,
-                        "stroke-opacity": 1
+                        "stroke-opacity": 1,
                       },
                       hover: {
                         fill: "#dee2e6",
                         "fill-opacity": 0.8,
-                        cursor: "pointer"
+                        cursor: "pointer",
                       },
                       selected: {
-                        fill: "yellow"
+                        fill: "yellow",
                       },
-                      selectedHover: {}
+                      selectedHover: {},
                     }}
                     markerStyle={{
                       initial: {
                         fill: "#fb6340",
-                        "stroke-width": 0
+                        "stroke-width": 0,
                       },
                       hover: {
                         fill: "#11cdef",
-                        "stroke-width": 0
-                      }
+                        "stroke-width": 0,
+                      },
                     }}
                     markers={[
                       {
                         latLng: [41.9, 12.45],
-                        name: "Vatican City"
+                        name: "Vatican City",
                       },
                       {
                         latLng: [43.73, 7.41],
-                        name: "Monaco"
+                        name: "Monaco",
                       },
                       {
                         latLng: [35.88, 14.5],
-                        name: "Malta"
+                        name: "Malta",
                       },
                       {
                         latLng: [1.3, 103.8],
-                        name: "Singapore"
+                        name: "Singapore",
                       },
                       {
                         latLng: [1.46, 173.03],
-                        name: "Kiribati"
+                        name: "Kiribati",
                       },
                       {
                         latLng: [-21.13, -175.2],
-                        name: "Tonga"
+                        name: "Tonga",
                       },
                       {
                         latLng: [15.3, -61.38],
-                        name: "Dominica"
+                        name: "Dominica",
                       },
                       {
                         latLng: [-20.2, 57.5],
-                        name: "Mauritius"
+                        name: "Mauritius",
                       },
                       {
                         latLng: [26.02, 50.55],
-                        name: "Bahrain"
-                      }
+                        name: "Bahrain",
+                      },
                     ]}
                     series={{
                       regions: [
                         {
                           values: mapData,
                           scale: ["#ced4da", "#adb5bd"],
-                          normalizeFunction: "polynomial"
-                        }
-                      ]
+                          normalizeFunction: "polynomial",
+                        },
+                      ],
                     }}
                   />
                   <ListGroup className="list my--3" flush>

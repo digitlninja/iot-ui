@@ -1,7 +1,16 @@
 import React from "react";
 
-import { Button, ButtonGroup, Card, CardHeader, CardBody, Container, Row, Col } from "reactstrap";
-import SimpleHeader from "components/Headers/SimpleHeader.js";
+import {
+  Button,
+  ButtonGroup,
+  Card,
+  CardHeader,
+  CardBody,
+  Container,
+  Row,
+  Col,
+} from "reactstrap";
+import SimpleHeader from "components/headers/SimpleHeader.js";
 
 class Buttons extends React.Component {
   render() {
@@ -168,7 +177,11 @@ class Buttons extends React.Component {
                   <h3 className="mb-0">Social</h3>
                 </CardHeader>
                 <CardBody>
-                  <Button className="btn-icon my-2" color="facebook" type="button">
+                  <Button
+                    className="btn-icon my-2"
+                    color="facebook"
+                    type="button"
+                  >
                     <span className="btn-inner--icon mr-1">
                       <i className="fab fa-facebook" />
                     </span>
@@ -180,13 +193,21 @@ class Buttons extends React.Component {
                     </span>
                     <span className="btn-inner--text">Twitter</span>
                   </Button>
-                  <Button className="btn-google-plus btn-icon" color="google" type="button">
+                  <Button
+                    className="btn-google-plus btn-icon"
+                    color="google"
+                    type="button"
+                  >
                     <span className="btn-inner--icon mr-1">
                       <i className="fab fa-google-plus-g" />
                     </span>
                     <span className="btn-inner--text">Google +</span>
                   </Button>
-                  <Button className="btn-instagram btn-icon" color="default" type="button">
+                  <Button
+                    className="btn-instagram btn-icon"
+                    color="default"
+                    type="button"
+                  >
                     <span className="btn-inner--icon mr-1">
                       <i className="fab fa-instagram" />
                     </span>
@@ -204,13 +225,21 @@ class Buttons extends React.Component {
                     </span>
                     <span className="btn-inner--text">Youtube</span>
                   </Button>
-                  <Button className="btn-vimeo btn-icon" color="default" type="button">
+                  <Button
+                    className="btn-vimeo btn-icon"
+                    color="default"
+                    type="button"
+                  >
                     <span className="btn-inner--icon mr-1">
                       <i className="fab fa-vimeo-v" />
                     </span>
                     <span className="btn-inner--text">Vimeo</span>
                   </Button>
-                  <Button className="btn-slack btn-icon" color="default" type="button">
+                  <Button
+                    className="btn-slack btn-icon"
+                    color="default"
+                    type="button"
+                  >
                     <span className="btn-inner--icon mr-1">
                       <i className="fab fa-slack" />
                     </span>
@@ -223,93 +252,165 @@ class Buttons extends React.Component {
                     <span className="btn-inner--text">Dribbble</span>
                   </Button>
                   <hr />
-                  <Button className="btn-icon-only" color="facebook" type="button">
+                  <Button
+                    className="btn-icon-only"
+                    color="facebook"
+                    type="button"
+                  >
                     <span className="btn-inner--icon">
                       <i className="fab fa-facebook" />
                     </span>
                   </Button>
-                  <Button className="btn-icon-only" color="twitter" type="button">
+                  <Button
+                    className="btn-icon-only"
+                    color="twitter"
+                    type="button"
+                  >
                     <span className="btn-inner--icon">
                       <i className="fab fa-twitter" />
                     </span>
                   </Button>
-                  <Button className="btn-google-plus btn-icon-only" color="google" type="button">
+                  <Button
+                    className="btn-google-plus btn-icon-only"
+                    color="google"
+                    type="button"
+                  >
                     <span className="btn-inner--icon">
                       <i className="fab fa-google-plus-g" />
                     </span>
                   </Button>
-                  <Button className="btn-instagram btn-icon-only" color="default" type="button">
+                  <Button
+                    className="btn-instagram btn-icon-only"
+                    color="default"
+                    type="button"
+                  >
                     <span className="btn-inner--icon">
                       <i className="fab fa-instagram" />
                     </span>
                   </Button>
-                  <Button className="btn-icon-only" color="pinterest" type="button">
+                  <Button
+                    className="btn-icon-only"
+                    color="pinterest"
+                    type="button"
+                  >
                     <span className="btn-inner--icon">
                       <i className="fab fa-pinterest" />
                     </span>
                   </Button>
-                  <Button className="btn-icon-only" color="youtube" type="button">
+                  <Button
+                    className="btn-icon-only"
+                    color="youtube"
+                    type="button"
+                  >
                     <span className="btn-inner--icon">
                       <i className="fab fa-youtube" />
                     </span>
                   </Button>
-                  <Button className="btn-vimeo btn-icon-only" color="default" type="button">
+                  <Button
+                    className="btn-vimeo btn-icon-only"
+                    color="default"
+                    type="button"
+                  >
                     <span className="btn-inner--icon">
                       <i className="fab fa-vimeo-v" />
                     </span>
                   </Button>
-                  <Button className="btn-slack btn-icon-only" color="default" type="button">
+                  <Button
+                    className="btn-slack btn-icon-only"
+                    color="default"
+                    type="button"
+                  >
                     <span className="btn-inner--icon">
                       <i className="fab fa-slack" />
                     </span>
                   </Button>
-                  <Button className="btn-icon-only" color="dribbble" type="button">
+                  <Button
+                    className="btn-icon-only"
+                    color="dribbble"
+                    type="button"
+                  >
                     <span className="btn-inner--icon">
                       <i className="fab fa-dribbble" />
                     </span>
                   </Button>
                   <hr />
-                  <Button className="btn-icon-only rounded-circle" color="facebook" type="button">
+                  <Button
+                    className="btn-icon-only rounded-circle"
+                    color="facebook"
+                    type="button"
+                  >
                     <span className="btn-inner--icon">
                       <i className="fab fa-facebook" />
                     </span>
                   </Button>
-                  <Button className="btn-icon-only rounded-circle" color="twitter" type="button">
+                  <Button
+                    className="btn-icon-only rounded-circle"
+                    color="twitter"
+                    type="button"
+                  >
                     <span className="btn-inner--icon">
                       <i className="fab fa-twitter" />
                     </span>
                   </Button>
-                  <Button className="btn-google-plus btn-icon-only rounded-circle" color="google" type="button">
+                  <Button
+                    className="btn-google-plus btn-icon-only rounded-circle"
+                    color="google"
+                    type="button"
+                  >
                     <span className="btn-inner--icon">
                       <i className="fab fa-google-plus-g" />
                     </span>
                   </Button>
-                  <Button className="btn-instagram btn-icon-only rounded-circle" color="default" type="button">
+                  <Button
+                    className="btn-instagram btn-icon-only rounded-circle"
+                    color="default"
+                    type="button"
+                  >
                     <span className="btn-inner--icon">
                       <i className="fab fa-instagram" />
                     </span>
                   </Button>
-                  <Button className="btn-icon-only rounded-circle" color="pinterest" type="button">
+                  <Button
+                    className="btn-icon-only rounded-circle"
+                    color="pinterest"
+                    type="button"
+                  >
                     <span className="btn-inner--icon">
                       <i className="fab fa-pinterest" />
                     </span>
                   </Button>
-                  <Button className="btn-icon-only rounded-circle" color="youtube" type="button">
+                  <Button
+                    className="btn-icon-only rounded-circle"
+                    color="youtube"
+                    type="button"
+                  >
                     <span className="btn-inner--icon">
                       <i className="fab fa-youtube" />
                     </span>
                   </Button>
-                  <Button className="btn-vimeo btn-icon-only rounded-circle" color="default" type="button">
+                  <Button
+                    className="btn-vimeo btn-icon-only rounded-circle"
+                    color="default"
+                    type="button"
+                  >
                     <span className="btn-inner--icon">
                       <i className="fab fa-vimeo-v" />
                     </span>
                   </Button>
-                  <Button className="btn-slack btn-icon-only rounded-circle" color="default" type="button">
+                  <Button
+                    className="btn-slack btn-icon-only rounded-circle"
+                    color="default"
+                    type="button"
+                  >
                     <span className="btn-inner--icon">
                       <i className="fab fa-slack" />
                     </span>
                   </Button>
-                  <Button className="btn-icon-only rounded-circle" color="dribbble" type="button">
+                  <Button
+                    className="btn-icon-only rounded-circle"
+                    color="dribbble"
+                    type="button"
+                  >
                     <span className="btn-inner--icon">
                       <i className="fab fa-dribbble" />
                     </span>

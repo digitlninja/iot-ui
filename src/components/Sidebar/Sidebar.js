@@ -24,7 +24,14 @@ import { PropTypes } from "prop-types";
 // react library that creates nice scrollbar on windows devices
 import PerfectScrollbar from "react-perfect-scrollbar";
 // reactstrap components
-import { Collapse, NavbarBrand, Navbar, NavItem, NavLink, Nav } from "reactstrap";
+import {
+  Collapse,
+  NavbarBrand,
+  Navbar,
+  NavItem,
+  NavLink,
+  Nav,
+} from "reactstrap";
 
 class Sidebar extends React.Component {
   constructor(props) {
@@ -134,14 +141,24 @@ class Sidebar extends React.Component {
               ) : null}
             </NavLink>
             <Collapse isOpen={this.state[prop.state]}>
-              <Nav className="nav-sm flex-column">{this.createLinks(prop.views)}</Nav>
+              <Nav className="nav-sm flex-column">
+                {this.createLinks(prop.views)}
+              </Nav>
             </Collapse>
           </NavItem>
         );
       }
       return (
-        <NavItem className={this.activeRoute(prop.layout + prop.path)} key={key}>
-          <NavLink to={prop.layout + prop.path} activeClassName="" onClick={this.closeSidenav} tag={NavLinkRRD}>
+        <NavItem
+          className={this.activeRoute(prop.layout + prop.path)}
+          key={key}
+        >
+          <NavLink
+            to={prop.layout + prop.path}
+            activeClassName=""
+            onClick={this.closeSidenav}
+            tag={NavLinkRRD}
+          >
             {prop.icon !== undefined ? (
               <>
                 <i className={prop.icon} />
@@ -179,7 +196,11 @@ class Sidebar extends React.Component {
         <div className="sidenav-header d-flex align-items-center">
           {logo ? (
             <NavbarBrand {...navbarBrandProps}>
-              <img alt={logo.imgAlt} className="navbar-brand-img" src={logo.imgSrc} />
+              <img
+                alt={logo.imgAlt}
+                className="navbar-brand-img"
+                src={logo.imgSrc}
+              />
             </NavbarBrand>
           ) : null}
           <div className="ml-auto">
@@ -208,7 +229,8 @@ class Sidebar extends React.Component {
     return (
       <Navbar
         className={
-          "sidenav navbar-vertical navbar-expand-xs navbar-light bg-white " + (this.props.rtlActive ? "" : "fixed-left")
+          "sidenav navbar-vertical navbar-expand-xs navbar-light bg-white " +
+          (this.props.rtlActive ? "" : "fixed-left")
         }
         onMouseEnter={this.onMouseEnterSidenav}
         onMouseLeave={this.onMouseLeaveSidenav}

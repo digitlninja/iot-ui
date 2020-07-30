@@ -1,12 +1,10 @@
 import React from "react";
-// react library for routing
-import { Route, Switch, Redirect } from "react-router-dom";
-// core components
-import AdminNavbar from "components/Navbars/AdminNavbar.js";
-import AdminFooter from "components/Footers/AdminFooter.js";
-import Sidebar from "components/Sidebar/Sidebar.js";
+import { Route, Switch } from "react-router-dom";
+import AdminNavbar from "../components/navbars/AdminNavbar.js";
+import AdminFooter from "../components/footers/AdminFooter.js";
+import Sidebar from "../components/sidebar/Sidebar.js";
 
-import routes from "routes.js";
+import routes from "../routes.js";
 
 class Admin extends React.Component {
   state = {
@@ -25,7 +23,13 @@ class Admin extends React.Component {
         return this.getRoutes(prop.views);
       }
       if (prop.layout === "/admin") {
-        return <Route path={prop.layout + prop.path} component={prop.component} key={key} />;
+        return (
+          <Route
+            path={prop.layout + prop.path}
+            component={prop.component}
+            key={key}
+          />
+        );
       } else {
         return null;
       }
@@ -33,7 +37,11 @@ class Admin extends React.Component {
   };
   getBrandText = (path) => {
     for (let i = 0; i < routes.length; i++) {
-      if (this.props.location.pathname.indexOf(routes[i].layout + routes[i].path) !== -1) {
+      if (
+        this.props.location.pathname.indexOf(
+          routes[i].layout + routes[i].path
+        ) !== -1
+      ) {
         return routes[i].name;
       }
     }
@@ -53,23 +61,31 @@ class Admin extends React.Component {
     });
   };
   getNavbarTheme = () => {
-    return this.props.location.pathname.indexOf("admin/alternative-dashboard") === -1 ? "dark" : "light";
+    return this.props.location.pathname.indexOf(
+      "admin/alternative-dashboard"
+    ) === -1
+      ? "dark"
+      : "light";
   };
   render() {
     return (
       <>
         <Sidebar
           {...this.props}
-          routes={routes}
+          routes={routes.filter((route) => route.isSideNavItem)}
           toggleSidenav={this.toggleSidenav}
           sidenavOpen={this.state.sidenavOpen}
           logo={{
-            innerLink: "/",
-            imgSrc: require("assets/img/brand/argon-react.png"),
+            innerLink: "/admin/",
+            imgSrc: require("assets/img/brand/three-sprints-logo-purple-small.png"),
             imgAlt: "...",
           }}
         />
-        <div className="main-content" ref="mainContent" onClick={this.closeSidenav}>
+        <div
+          className="main-content"
+          ref="mainContent"
+          onClick={this.closeSidenav}
+        >
           <AdminNavbar
             {...this.props}
             theme={this.getNavbarTheme()}
@@ -77,13 +93,12 @@ class Admin extends React.Component {
             sidenavOpen={this.state.sidenavOpen}
             brandText={this.getBrandText(this.props.location.pathname)}
           />
-          <Switch>
-            {this.getRoutes(routes)}
-            <Redirect from="*" to="/admin/dashboard" />
-          </Switch>
+          <Switch>{this.getRoutes(routes)}</Switch>
           <AdminFooter />
         </div>
-        {this.state.sidenavOpen ? <div className="backdrop d-xl-none" onClick={this.toggleSidenav} /> : null}
+        {this.state.sidenavOpen ? (
+          <div className="backdrop d-xl-none" onClick={this.toggleSidenav} />
+        ) : null}
       </>
     );
   }

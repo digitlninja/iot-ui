@@ -32,10 +32,10 @@ import {
   Container,
   Row,
   Col,
-  UncontrolledTooltip
+  UncontrolledTooltip,
 } from "reactstrap";
 // core components
-import SimpleHeader from "components/Headers/SimpleHeader.js";
+import SimpleHeader from "components/headers/SimpleHeader.js";
 
 import { dataTable } from "variables/general";
 
@@ -53,7 +53,7 @@ const pagination = paginationFactory({
             name="datatable-basic_length"
             aria-controls="datatable-basic"
             className="form-control form-control-sm"
-            onChange={e => onSizePerPageChange(e.target.value)}
+            onChange={(e) => onSizePerPageChange(e.target.value)}
           >
             <option value="10">10</option>
             <option value="25">25</option>
@@ -64,18 +64,18 @@ const pagination = paginationFactory({
         entries.
       </label>
     </div>
-  )
+  ),
 });
 
 const { SearchBar } = Search;
 
 class ReactBSTables extends React.Component {
   state = {
-    alert: null
+    alert: null,
   };
   // this function will copy to clipboard an entire table,
   // so you can paste it inside an excel or csv file
-  copyToClipboardAsTable = el => {
+  copyToClipboardAsTable = (el) => {
     var body = document.body,
       range,
       sel;
@@ -110,7 +110,7 @@ class ReactBSTables extends React.Component {
         >
           Copied to clipboard!
         </ReactBSAlert>
-      )
+      ),
     });
   };
   render() {
@@ -137,37 +137,37 @@ class ReactBSTables extends React.Component {
                     {
                       dataField: "name",
                       text: "Name",
-                      sort: true
+                      sort: true,
                     },
                     {
                       dataField: "position",
                       text: "Position",
-                      sort: true
+                      sort: true,
                     },
                     {
                       dataField: "office",
                       text: "Office",
-                      sort: true
+                      sort: true,
                     },
                     {
                       dataField: "age",
                       text: "Age",
-                      sort: true
+                      sort: true,
                     },
                     {
                       dataField: "start_date",
                       text: "Start date",
-                      sort: true
+                      sort: true,
                     },
                     {
                       dataField: "salary",
                       text: "Salary",
-                      sort: true
-                    }
+                      sort: true,
+                    },
                   ]}
                   search
                 >
-                  {props => (
+                  {(props) => (
                     <div className="py-4 table-responsive">
                       <div
                         id="datatable-basic_filter"
@@ -208,37 +208,37 @@ class ReactBSTables extends React.Component {
                     {
                       dataField: "name",
                       text: "Name",
-                      sort: true
+                      sort: true,
                     },
                     {
                       dataField: "position",
                       text: "Position",
-                      sort: true
+                      sort: true,
                     },
                     {
                       dataField: "office",
                       text: "Office",
-                      sort: true
+                      sort: true,
                     },
                     {
                       dataField: "age",
                       text: "Age",
-                      sort: true
+                      sort: true,
                     },
                     {
                       dataField: "start_date",
                       text: "Start date",
-                      sort: true
+                      sort: true,
                     },
                     {
                       dataField: "salary",
                       text: "Salary",
-                      sort: true
-                    }
+                      sort: true,
+                    },
                   ]}
                   search
                 >
-                  {props => (
+                  {(props) => (
                     <div className="py-4 table-responsive">
                       <Container fluid>
                         <Row>
@@ -304,7 +304,7 @@ class ReactBSTables extends React.Component {
                         </Row>
                       </Container>
                       <BootstrapTable
-                        ref={el => (this.componentRef = el)}
+                        ref={(el) => (this.componentRef = el)}
                         {...props.baseProps}
                         bootstrap4={true}
                         pagination={pagination}

@@ -37,24 +37,24 @@ import {
   Modal,
   Container,
   Row,
-  Col
+  Col,
 } from "reactstrap";
 // core components
-import SimpleHeader from "components/Headers/SimpleHeader.js";
+import SimpleHeader from "components/headers/SimpleHeader.js";
 
 class Notifications extends React.Component {
   state = {
     defaultModal: false,
     notificationModal: false,
     formModal: false,
-    alert: null
+    alert: null,
   };
-  toggleModal = state => {
+  toggleModal = (state) => {
     this.setState({
-      [state]: !this.state[state]
+      [state]: !this.state[state],
     });
   };
-  notify = type => {
+  notify = (type) => {
     let options = {
       place: "tc",
       message: (
@@ -70,7 +70,7 @@ class Notifications extends React.Component {
       ),
       type: type,
       icon: "ni ni-bell-55",
-      autoDismiss: 7
+      autoDismiss: 7,
     };
     this.refs.notificationAlert.notificationAlert(options);
   };
@@ -87,7 +87,7 @@ class Notifications extends React.Component {
         >
           A few words about this sweet alert ...
         </ReactBSAlert>
-      )
+      ),
     });
   };
   infoAlert = () => {
@@ -105,7 +105,7 @@ class Notifications extends React.Component {
         >
           A few words about this sweet alert ...
         </ReactBSAlert>
-      )
+      ),
     });
   };
   successAlert = () => {
@@ -123,7 +123,7 @@ class Notifications extends React.Component {
         >
           A few words about this sweet alert ...
         </ReactBSAlert>
-      )
+      ),
     });
   };
   warningAlert = () => {
@@ -141,7 +141,7 @@ class Notifications extends React.Component {
         >
           A few words about this sweet alert ...
         </ReactBSAlert>
-      )
+      ),
     });
   };
   questionAlert = () => {
@@ -167,12 +167,12 @@ class Notifications extends React.Component {
         >
           A few words about this sweet alert ...
         </ReactBSAlert>
-      )
+      ),
     });
   };
   hideAlert = () => {
     this.setState({
-      alert: null
+      alert: null,
     });
   };
   render() {
@@ -414,7 +414,7 @@ class Notifications extends React.Component {
                                   className="btn-neutral btn-icon"
                                   color="default"
                                   href="#pablo"
-                                  onClick={e => e.preventDefault()}
+                                  onClick={(e) => e.preventDefault()}
                                 >
                                   <span className="btn-inner--icon mr-1">
                                     <img
@@ -430,7 +430,7 @@ class Notifications extends React.Component {
                                   className="btn-neutral btn-icon"
                                   color="default"
                                   href="#pablo"
-                                  onClick={e => e.preventDefault()}
+                                  onClick={(e) => e.preventDefault()}
                                 >
                                   <span className="btn-inner--icon mr-1">
                                     <img
@@ -451,7 +451,7 @@ class Notifications extends React.Component {
                               <Form role="form">
                                 <FormGroup
                                   className={classnames("mb-3", {
-                                    focused: this.state.focusedEmail
+                                    focused: this.state.focusedEmail,
                                   })}
                                 >
                                   <InputGroup className="input-group-merge input-group-alternative">
@@ -474,7 +474,7 @@ class Notifications extends React.Component {
                                 </FormGroup>
                                 <FormGroup
                                   className={classnames({
-                                    focused: this.state.focusedPassword
+                                    focused: this.state.focusedPassword,
                                   })}
                                 >
                                   <InputGroup className="input-group-merge input-group-alternative">
@@ -491,7 +491,7 @@ class Notifications extends React.Component {
                                       }
                                       onBlur={() =>
                                         this.setState({
-                                          focusedPassword: false
+                                          focusedPassword: false,
                                         })
                                       }
                                     />

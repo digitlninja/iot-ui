@@ -1,9 +1,12 @@
 import React, { useState, useContext } from "react";
+import { useHistory } from "react-router";
+import { useForm } from "react-hook-form";
+import Loader from "react-loader-spinner";
+
 import classnames from "classnames";
 import {
   Button,
   CardBody,
-  CardHeader,
   FormGroup,
   Form,
   Input,
@@ -11,158 +14,149 @@ import {
   InputGroupText,
   InputGroup,
 } from "reactstrap";
-import { useForm } from "react-hook-form";
-import jwtDecode from "jwt-decode";
 
 import useLoginMutation from "../graphql/useLoginMutation";
-import useRefreshTokensMutation from "../graphql/useRefreshTokensMutation";
-import Context from "../../../store/Context";
-import { useMutation } from "@apollo/client";
+import { Context } from "../../../store/Store";
+import { usernameRules, passwordRules } from "../validation-rules";
+import { SAVE_TOKENS } from "../../../store/types";
+import { isGraphQLErrorResult } from "../../../helpers";
 
 const initialState = {
   username: "",
   password: "",
   userNameError: "",
   passwordError: "",
-  requestError: "",
+  requestErrors: [],
 };
 
 const LoginForm = () => {
-  const alphaNumericRegex = /[a-zA-Z0-9]/;
-  const cognitoRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[\^$*.\[\]{}\(\)?\-“!@#%&/,><\’:;|_~`])\S{8,99}$/;
-
-  const usernameRules = { required: true, minLength: 3, maxLength: 20, pattern: alphaNumericRegex };
-
-  const passwordRules = { required: true, pattern: cognitoRegex };
-
+  let history = useHistory();
   const [loginMutation, { loading }] = useLoginMutation();
-  const [refreshUserTokensMutation, { data }] = useRefreshTokensMutation();
+  // eslint-disable-next-line
+  const [globalState, dispatch] = useContext(Context);
 
-  const { globalState, actions } = useContext(Context);
+  const {
+    register,
+    handleSubmit,
+    formState,
+    errors: formErrors,
+    reset,
+  } = useForm();
+
   const [state, setState] = useState(initialState);
-
-  const [focusedEmail, setFocusedUsername] = useState(false);
+  const [focusedUsername, setFocusedUsername] = useState(false);
   const [focusedPassword, setFocusedPassword] = useState(false);
 
-  const { register, handleSubmit, formState, errors: formErrors } = useForm();
-
-  const saveTokens = (data) => {
-    localStorage.setItem("idToken", data.login.idToken);
-    localStorage.setItem("accessToken", data.login.accessToken);
-    localStorage.setItem("refreshToken", data.login.refreshToken);
+  const flashErrorToState = (error) => {
+    setState({
+      ...state,
+      requestErrors: error.messages || [error.message],
+    });
+    setTimeout(() => setState({ ...state, requestErrors: [] }), 4000);
   };
 
   const onSubmit = async (formData) => {
     try {
-      const { data } = await loginMutation({ variables: { username: formData.username, password: formData.password } });
-      saveTokens(data);
-      actions({ type: "setRefreshTimeout", payload: { tokens: data.login } });
-
-      // const decodedToken = jwtDecode(payload.idToken);
-
-      // setTimeout(() => {}, decodedToken.exp - decodedToken.auth_time - 300);
+      const { data } = await loginMutation({
+        variables: { username: formData.username, password: formData.password },
+      });
+      reset();
+      if (isGraphQLErrorResult(data.logIn)) {
+        flashErrorToState(data.logIn);
+        return;
+      }
+      await dispatch({ type: SAVE_TOKENS, payload: data.logIn });
+      history.push("/admin");
     } catch (error) {
-      setState({ ...state, requestError: "Incorrect username or password." });
+      console.log({ error });
+      history.push("/error");
+      return;
     }
   };
+
   return (
-    <>
-      <CardHeader className="bg-transparent pb-5">
-        <div className="text-muted text-center mt-2 mb-3">
-          <small>Sign in with</small>
-        </div>
-        <div className="btn-wrapper text-center">
-          <Button className="btn-neutral btn-icon" color="default" onClick={(event) => event.preventDefault()}>
-            <span className="btn-inner--icon mr-1">
-              <img alt="..." src={require("assets/img/icons/common/google.svg")} />
-            </span>
-            <span className="btn-inner--text">Google</span>
+    <CardBody className="px-lg-5 py-lg-5">
+      <div className="text-center text-muted mb-4">
+        <small>Fill in your details</small>
+      </div>
+      <Form role="form" onSubmit={handleSubmit(onSubmit)}>
+        <FormGroup
+          className={classnames("mb-3", {
+            focused: focusedUsername,
+          })}
+        >
+          <InputGroup className="input-group-merge input-group-alternative">
+            <InputGroupAddon addonType="prepend">
+              <InputGroupText>
+                <i className="ni ni-single-02" />
+              </InputGroupText>
+            </InputGroupAddon>
+            <Input
+              placeholder="Username"
+              type="text"
+              name="username"
+              onFocus={() => setFocusedUsername(true)}
+              onBlur={() => setFocusedUsername(false)}
+              innerRef={register(usernameRules)}
+            />
+          </InputGroup>
+        </FormGroup>
+        <FormGroup
+          className={classnames({
+            focused: focusedPassword,
+          })}
+        >
+          <InputGroup className="input-group-merge input-group-alternative">
+            <InputGroupAddon addonType="prepend">
+              <InputGroupText>
+                <i className="ni ni-lock-circle-open" />
+              </InputGroupText>
+            </InputGroupAddon>
+            <Input
+              placeholder="Password"
+              type="password"
+              name="password"
+              onFocus={() => setFocusedPassword(true)}
+              onBlur={() => setFocusedPassword(false)}
+              innerRef={register(passwordRules)}
+            />
+          </InputGroup>
+          {state.requestErrors.length > 0 && (
+            <div className="mt-2 pl-1">
+              {state.requestErrors.map((error) => (
+                <small key={error} className="text-danger">
+                  {error}
+                </small>
+              ))}
+            </div>
+          )}
+        </FormGroup>
+        <div className="text-center">
+          <Button
+            className="my-4"
+            color="info"
+            type="submit"
+            disabled={
+              loading ||
+              Object.keys(formErrors).length > 0 ||
+              !formState.isDirty
+            }
+          >
+            {loading && (
+              <Loader
+                type="TailSpin"
+                color="#fff"
+                height={16}
+                width={16}
+                radius={5}
+                className="mr-2 float-left"
+              />
+            )}
+            Sign in
           </Button>
         </div>
-      </CardHeader>
-      <CardBody className="px-lg-5 py-lg-5">
-        <div className="text-center text-muted mb-4">
-          <small>Or sign in with credentials</small>
-        </div>
-        <Form role="form" onSubmit={handleSubmit(onSubmit)}>
-          <FormGroup
-            className={classnames("mb-3", {
-              focused: focusedEmail,
-            })}
-          >
-            <InputGroup className="input-group-merge input-group-alternative">
-              <InputGroupAddon addonType="prepend">
-                <InputGroupText>
-                  <i className="ni ni-email-83" />
-                </InputGroupText>
-              </InputGroupAddon>
-              <Input
-                placeholder="Username"
-                type="text"
-                name="username"
-                onFocus={() => setFocusedUsername(true)}
-                onBlur={() => setFocusedUsername(false)}
-                innerRef={register(usernameRules)}
-              />
-            </InputGroup>
-            {formErrors && formErrors.username && (
-              <div className="mt-2">
-                <small className="text-danger">Your username must be between 3 - 20 characters.</small>
-              </div>
-            )}
-          </FormGroup>
-          <FormGroup
-            className={classnames({
-              focused: focusedPassword,
-            })}
-          >
-            <InputGroup className="input-group-merge input-group-alternative">
-              <InputGroupAddon addonType="prepend">
-                <InputGroupText>
-                  <i className="ni ni-lock-circle-open" />
-                </InputGroupText>
-              </InputGroupAddon>
-              <Input
-                placeholder="Password"
-                type="password"
-                name="password"
-                onFocus={() => setFocusedPassword(true)}
-                onBlur={() => setFocusedPassword(false)}
-                innerRef={register(passwordRules)}
-              />
-            </InputGroup>
-            {formErrors && formErrors.password && (
-              <div className="mt-2">
-                <small className="text-danger">
-                  Your password must have lowercase and uppercase letters, and numbers and symbols.
-                </small>
-              </div>
-            )}
-            {state.requestError && (
-              <div className="mt-2">
-                <small className="text-danger">{state.requestError}</small>
-              </div>
-            )}
-          </FormGroup>
-          <div className="custom-control custom-control-alternative custom-checkbox">
-            <input className="custom-control-input" id=" customCheckLogin" type="checkbox" />
-            <label className="custom-control-label" htmlFor=" customCheckLogin">
-              <span className="text-muted">Remember me</span>
-            </label>
-          </div>
-          <div className="text-center">
-            <Button
-              className="my-4"
-              color="info"
-              type="submit"
-              disabled={loading || Object.keys(formErrors).length || !formState.isDirty}
-            >
-              Sign in
-            </Button>
-          </div>
-        </Form>
-      </CardBody>
-    </>
+      </Form>
+    </CardBody>
   );
 };
 

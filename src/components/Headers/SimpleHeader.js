@@ -24,7 +24,7 @@ import {
   Button,
   Container,
   Row,
-  Col
+  Col,
 } from "reactstrap";
 
 class TimelineHeader extends React.Component {
@@ -44,12 +44,12 @@ class TimelineHeader extends React.Component {
                     listClassName="breadcrumb-links breadcrumb-dark"
                   >
                     <BreadcrumbItem>
-                      <a href="#pablo" onClick={e => e.preventDefault()}>
+                      <a href="#pablo" onClick={(e) => e.preventDefault()}>
                         <i className="fas fa-home" />
                       </a>
                     </BreadcrumbItem>
                     <BreadcrumbItem>
-                      <a href="#pablo" onClick={e => e.preventDefault()}>
+                      <a href="#pablo" onClick={(e) => e.preventDefault()}>
                         {this.props.parentName}
                       </a>
                     </BreadcrumbItem>
@@ -77,7 +77,7 @@ class TimelineHeader extends React.Component {
 
 TimelineHeader.propTypes = {
   name: PropTypes.string,
-  parentName: PropTypes.string
+  parentName: PropTypes.string,
 };
 
 export default TimelineHeader;

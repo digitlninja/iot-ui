@@ -1,7 +1,7 @@
 import Dashboard from "views/pages/dashboards/Dashboard.js";
-import Login from "views/pages/examples/Login.js";
-import Profile from "views/pages/examples/Profile.js";
-import Register from "views/pages/examples/Register.js";
+import Login from "views/pages/auth/Login.js";
+import Register from "views/pages/auth/Register.js";
+import Error from "views/pages/Error.js";
 
 const routes = [
   {
@@ -12,6 +12,7 @@ const routes = [
     component: Dashboard,
     state: "dashboardsCollapse",
     layout: "/admin",
+    isSideNavItem: true,
   },
   {
     path: "/register",
@@ -20,12 +21,28 @@ const routes = [
     component: Register,
     state: "dashboardsCollapse",
     layout: "/admin",
+    isSideNavItem: false,
+  },
+  {
+    path: "/login",
+    name: "Login",
+    component: Login,
+    layout: "/admin",
+    isSideNavItem: false,
+  },
+  {
+    path: "/error",
+    name: "Error",
+    component: Error,
+    layout: "/admin",
+    isSideNavItem: false,
   },
   {
     collapse: true,
     name: "Examples",
     icon: "ni ni-ungroup text-orange",
     state: "examplesCollapse",
+    isSideNavItem: false,
     views: [
       {
         path: "/login",
@@ -40,13 +57,6 @@ const routes = [
         miniName: "R",
         component: Register,
         layout: "/auth",
-      },
-      {
-        path: "/profile",
-        name: "Profile",
-        miniName: "P",
-        component: Profile,
-        layout: "/admin",
       },
     ],
   },

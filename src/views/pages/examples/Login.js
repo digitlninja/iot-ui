@@ -31,10 +31,10 @@ import {
   InputGroup,
   Container,
   Row,
-  Col
+  Col,
 } from "reactstrap";
 // core components
-import AuthHeader from "components/Headers/AuthHeader.js";
+import AuthHeader from "components/headers/AuthHeader.js";
 
 class Login extends React.Component {
   state = {};
@@ -58,7 +58,7 @@ class Login extends React.Component {
                       className="btn-neutral btn-icon"
                       color="default"
                       href="#pablo"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       <span className="btn-inner--icon mr-1">
                         <img
@@ -72,7 +72,7 @@ class Login extends React.Component {
                       className="btn-neutral btn-icon"
                       color="default"
                       href="#pablo"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       <span className="btn-inner--icon mr-1">
                         <img
@@ -91,7 +91,7 @@ class Login extends React.Component {
                   <Form role="form">
                     <FormGroup
                       className={classnames("mb-3", {
-                        focused: this.state.focusedEmail
+                        focused: this.state.focusedEmail,
                       })}
                     >
                       <InputGroup className="input-group-merge input-group-alternative">
@@ -110,7 +110,7 @@ class Login extends React.Component {
                     </FormGroup>
                     <FormGroup
                       className={classnames({
-                        focused: this.state.focusedPassword
+                        focused: this.state.focusedPassword,
                       })}
                     >
                       <InputGroup className="input-group-merge input-group-alternative">
@@ -157,7 +157,7 @@ class Login extends React.Component {
                   <a
                     className="text-light"
                     href="#pablo"
-                    onClick={e => e.preventDefault()}
+                    onClick={(e) => e.preventDefault()}
                   >
                     <small>Forgot password?</small>
                   </a>
@@ -166,7 +166,7 @@ class Login extends React.Component {
                   <a
                     className="text-light"
                     href="#pablo"
-                    onClick={e => e.preventDefault()}
+                    onClick={(e) => e.preventDefault()}
                   >
                     <small>Create new account</small>
                   </a>

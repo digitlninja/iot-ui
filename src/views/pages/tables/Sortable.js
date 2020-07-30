@@ -35,24 +35,24 @@ import {
   Table,
   Container,
   Row,
-  UncontrolledTooltip
+  UncontrolledTooltip,
 } from "reactstrap";
 // core components
-import SimpleHeader from "components/Headers/SimpleHeader.js";
+import SimpleHeader from "components/headers/SimpleHeader.js";
 
 class Sortable extends React.Component {
   componentDidMount() {
     new List(this.refs["first-list"], {
       valueNames: ["name", "budget", "status", "completion"],
-      listClass: "list"
+      listClass: "list",
     });
     new List(this.refs["second-list"], {
       valueNames: ["name", "budget", "status", "completion"],
-      listClass: "list"
+      listClass: "list",
     });
     new List(this.refs["third-list"], {
       valueNames: ["name", "budget", "status", "completion"],
-      listClass: "list"
+      listClass: "list",
     });
   }
   render() {
@@ -93,7 +93,7 @@ class Sortable extends React.Component {
                             <a
                               className="avatar rounded-circle mr-3"
                               href="#pablo"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               <img
                                 alt="..."
@@ -120,7 +120,7 @@ class Sortable extends React.Component {
                               className="avatar avatar-sm rounded-circle"
                               href="#pablo"
                               id="tooltip649644480"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               <img
                                 alt="..."
@@ -137,7 +137,7 @@ class Sortable extends React.Component {
                               className="avatar avatar-sm rounded-circle"
                               href="#pablo"
                               id="tooltip271118748"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               <img
                                 alt="..."
@@ -154,7 +154,7 @@ class Sortable extends React.Component {
                               className="avatar avatar-sm rounded-circle"
                               href="#pablo"
                               id="tooltip456883903"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               <img
                                 alt="..."
@@ -171,7 +171,7 @@ class Sortable extends React.Component {
                               className="avatar avatar-sm rounded-circle"
                               href="#pablo"
                               id="tooltip427983389"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               <img
                                 alt="..."
@@ -207,19 +207,19 @@ class Sortable extends React.Component {
                             <DropdownMenu className="dropdown-menu-arrow" right>
                               <DropdownItem
                                 href="#pablo"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 Action
                               </DropdownItem>
                               <DropdownItem
                                 href="#pablo"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 Another action
                               </DropdownItem>
                               <DropdownItem
                                 href="#pablo"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 Something else here
                               </DropdownItem>
@@ -233,7 +233,7 @@ class Sortable extends React.Component {
                             <a
                               className="avatar rounded-circle mr-3"
                               href="#pablo"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               <img
                                 alt="..."
@@ -260,7 +260,7 @@ class Sortable extends React.Component {
                               className="avatar avatar-sm rounded-circle"
                               href="#pablo"
                               id="tooltip308604570"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               <img
                                 alt="..."
@@ -277,7 +277,7 @@ class Sortable extends React.Component {
                               className="avatar avatar-sm rounded-circle"
                               href="#pablo"
                               id="tooltip463448556"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               <img
                                 alt="..."
@@ -294,7 +294,7 @@ class Sortable extends React.Component {
                               className="avatar avatar-sm rounded-circle"
                               href="#pablo"
                               id="tooltip474990624"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               <img
                                 alt="..."
@@ -311,7 +311,7 @@ class Sortable extends React.Component {
                               className="avatar avatar-sm rounded-circle"
                               href="#pablo"
                               id="tooltip371113692"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               <img
                                 alt="..."
@@ -347,19 +347,19 @@ class Sortable extends React.Component {
                             <DropdownMenu className="dropdown-menu-arrow" right>
                               <DropdownItem
                                 href="#pablo"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 Action
                               </DropdownItem>
                               <DropdownItem
                                 href="#pablo"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 Another action
                               </DropdownItem>
                               <DropdownItem
                                 href="#pablo"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 Something else here
                               </DropdownItem>
@@ -373,7 +373,7 @@ class Sortable extends React.Component {
                             <a
                               className="avatar rounded-circle mr-3"
                               href="#pablo"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               <img
                                 alt="..."
@@ -400,7 +400,7 @@ class Sortable extends React.Component {
                               className="avatar avatar-sm rounded-circle"
                               href="#pablo"
                               id="tooltip178353307"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               <img
                                 alt="..."
@@ -417,7 +417,7 @@ class Sortable extends React.Component {
                               className="avatar avatar-sm rounded-circle"
                               href="#pablo"
                               id="tooltip110940759"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               <img
                                 alt="..."
@@ -434,7 +434,7 @@ class Sortable extends React.Component {
                               className="avatar avatar-sm rounded-circle"
                               href="#pablo"
                               id="tooltip721474482"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               <img
                                 alt="..."
@@ -451,7 +451,7 @@ class Sortable extends React.Component {
                               className="avatar avatar-sm rounded-circle"
                               href="#pablo"
                               id="tooltip248059973"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               <img
                                 alt="..."
@@ -487,19 +487,19 @@ class Sortable extends React.Component {
                             <DropdownMenu className="dropdown-menu-arrow" right>
                               <DropdownItem
                                 href="#pablo"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 Action
                               </DropdownItem>
                               <DropdownItem
                                 href="#pablo"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 Another action
                               </DropdownItem>
                               <DropdownItem
                                 href="#pablo"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 Something else here
                               </DropdownItem>
@@ -513,7 +513,7 @@ class Sortable extends React.Component {
                             <a
                               className="avatar rounded-circle mr-3"
                               href="#pablo"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               <img
                                 alt="..."
@@ -540,7 +540,7 @@ class Sortable extends React.Component {
                               className="avatar avatar-sm rounded-circle"
                               href="#pablo"
                               id="tooltip338716581"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               <img
                                 alt="..."
@@ -557,7 +557,7 @@ class Sortable extends React.Component {
                               className="avatar avatar-sm rounded-circle"
                               href="#pablo"
                               id="tooltip384272281"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               <img
                                 alt="..."
@@ -574,7 +574,7 @@ class Sortable extends React.Component {
                               className="avatar avatar-sm rounded-circle"
                               href="#pablo"
                               id="tooltip714277819"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               <img
                                 alt="..."
@@ -591,7 +591,7 @@ class Sortable extends React.Component {
                               className="avatar avatar-sm rounded-circle"
                               href="#pablo"
                               id="tooltip352802795"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               <img
                                 alt="..."
@@ -627,19 +627,19 @@ class Sortable extends React.Component {
                             <DropdownMenu className="dropdown-menu-arrow" right>
                               <DropdownItem
                                 href="#pablo"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 Action
                               </DropdownItem>
                               <DropdownItem
                                 href="#pablo"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 Another action
                               </DropdownItem>
                               <DropdownItem
                                 href="#pablo"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 Something else here
                               </DropdownItem>
@@ -653,7 +653,7 @@ class Sortable extends React.Component {
                             <a
                               className="avatar rounded-circle mr-3"
                               href="#pablo"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               <img
                                 alt="..."
@@ -680,7 +680,7 @@ class Sortable extends React.Component {
                               className="avatar avatar-sm rounded-circle"
                               href="#pablo"
                               id="tooltip261050883"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               <img
                                 alt="..."
@@ -697,7 +697,7 @@ class Sortable extends React.Component {
                               className="avatar avatar-sm rounded-circle"
                               href="#pablo"
                               id="tooltip704196347"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               <img
                                 alt="..."
@@ -714,7 +714,7 @@ class Sortable extends React.Component {
                               className="avatar avatar-sm rounded-circle"
                               href="#pablo"
                               id="tooltip455439475"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               <img
                                 alt="..."
@@ -731,7 +731,7 @@ class Sortable extends React.Component {
                               className="avatar avatar-sm rounded-circle"
                               href="#pablo"
                               id="tooltip948033723"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               <img
                                 alt="..."
@@ -767,19 +767,19 @@ class Sortable extends React.Component {
                             <DropdownMenu className="dropdown-menu-arrow" right>
                               <DropdownItem
                                 href="#pablo"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 Action
                               </DropdownItem>
                               <DropdownItem
                                 href="#pablo"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 Another action
                               </DropdownItem>
                               <DropdownItem
                                 href="#pablo"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 Something else here
                               </DropdownItem>
@@ -799,7 +799,7 @@ class Sortable extends React.Component {
                       <PaginationItem className="disabled">
                         <PaginationLink
                           href="#pablo"
-                          onClick={e => e.preventDefault()}
+                          onClick={(e) => e.preventDefault()}
                           tabIndex="-1"
                         >
                           <i className="fas fa-angle-left" />
@@ -809,7 +809,7 @@ class Sortable extends React.Component {
                       <PaginationItem className="active">
                         <PaginationLink
                           href="#pablo"
-                          onClick={e => e.preventDefault()}
+                          onClick={(e) => e.preventDefault()}
                         >
                           1
                         </PaginationLink>
@@ -817,7 +817,7 @@ class Sortable extends React.Component {
                       <PaginationItem>
                         <PaginationLink
                           href="#pablo"
-                          onClick={e => e.preventDefault()}
+                          onClick={(e) => e.preventDefault()}
                         >
                           2 <span className="sr-only">(current)</span>
                         </PaginationLink>
@@ -825,7 +825,7 @@ class Sortable extends React.Component {
                       <PaginationItem>
                         <PaginationLink
                           href="#pablo"
-                          onClick={e => e.preventDefault()}
+                          onClick={(e) => e.preventDefault()}
                         >
                           3
                         </PaginationLink>
@@ -833,7 +833,7 @@ class Sortable extends React.Component {
                       <PaginationItem>
                         <PaginationLink
                           href="#pablo"
-                          onClick={e => e.preventDefault()}
+                          onClick={(e) => e.preventDefault()}
                         >
                           <i className="fas fa-angle-right" />
                           <span className="sr-only">Next</span>
@@ -876,7 +876,7 @@ class Sortable extends React.Component {
                         <a
                           className="avatar rounded-circle mr-3"
                           href="#pablo"
-                          onClick={e => e.preventDefault()}
+                          onClick={(e) => e.preventDefault()}
                         >
                           <img
                             alt="..."
@@ -903,7 +903,7 @@ class Sortable extends React.Component {
                           className="avatar avatar-sm rounded-circle"
                           href="#pablo"
                           id="tooltip875701525"
-                          onClick={e => e.preventDefault()}
+                          onClick={(e) => e.preventDefault()}
                         >
                           <img
                             alt="..."
@@ -920,7 +920,7 @@ class Sortable extends React.Component {
                           className="avatar avatar-sm rounded-circle"
                           href="#pablo"
                           id="tooltip493102457"
-                          onClick={e => e.preventDefault()}
+                          onClick={(e) => e.preventDefault()}
                         >
                           <img
                             alt="..."
@@ -937,7 +937,7 @@ class Sortable extends React.Component {
                           className="avatar avatar-sm rounded-circle"
                           href="#pablo"
                           id="tooltip574236797"
-                          onClick={e => e.preventDefault()}
+                          onClick={(e) => e.preventDefault()}
                         >
                           <img
                             alt="..."
@@ -954,7 +954,7 @@ class Sortable extends React.Component {
                           className="avatar avatar-sm rounded-circle"
                           href="#pablo"
                           id="tooltip49218996"
-                          onClick={e => e.preventDefault()}
+                          onClick={(e) => e.preventDefault()}
                         >
                           <img
                             alt="..."
@@ -987,19 +987,19 @@ class Sortable extends React.Component {
                         <DropdownMenu className="dropdown-menu-arrow" right>
                           <DropdownItem
                             href="#pablo"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             Action
                           </DropdownItem>
                           <DropdownItem
                             href="#pablo"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             Another action
                           </DropdownItem>
                           <DropdownItem
                             href="#pablo"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             Something else here
                           </DropdownItem>
@@ -1013,7 +1013,7 @@ class Sortable extends React.Component {
                         <a
                           className="avatar rounded-circle mr-3"
                           href="#pablo"
-                          onClick={e => e.preventDefault()}
+                          onClick={(e) => e.preventDefault()}
                         >
                           <img
                             alt="..."
@@ -1040,7 +1040,7 @@ class Sortable extends React.Component {
                           className="avatar avatar-sm rounded-circle"
                           href="#pablo"
                           id="tooltip719286793"
-                          onClick={e => e.preventDefault()}
+                          onClick={(e) => e.preventDefault()}
                         >
                           <img
                             alt="..."
@@ -1057,7 +1057,7 @@ class Sortable extends React.Component {
                           className="avatar avatar-sm rounded-circle"
                           href="#pablo"
                           id="tooltip833013259"
-                          onClick={e => e.preventDefault()}
+                          onClick={(e) => e.preventDefault()}
                         >
                           <img
                             alt="..."
@@ -1074,7 +1074,7 @@ class Sortable extends React.Component {
                           className="avatar avatar-sm rounded-circle"
                           href="#pablo"
                           id="tooltip259638111"
-                          onClick={e => e.preventDefault()}
+                          onClick={(e) => e.preventDefault()}
                         >
                           <img
                             alt="..."
@@ -1091,7 +1091,7 @@ class Sortable extends React.Component {
                           className="avatar avatar-sm rounded-circle"
                           href="#pablo"
                           id="tooltip353573264"
-                          onClick={e => e.preventDefault()}
+                          onClick={(e) => e.preventDefault()}
                         >
                           <img
                             alt="..."
@@ -1127,19 +1127,19 @@ class Sortable extends React.Component {
                         <DropdownMenu className="dropdown-menu-arrow" right>
                           <DropdownItem
                             href="#pablo"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             Action
                           </DropdownItem>
                           <DropdownItem
                             href="#pablo"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             Another action
                           </DropdownItem>
                           <DropdownItem
                             href="#pablo"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             Something else here
                           </DropdownItem>
@@ -1153,7 +1153,7 @@ class Sortable extends React.Component {
                         <a
                           className="avatar rounded-circle mr-3"
                           href="#pablo"
-                          onClick={e => e.preventDefault()}
+                          onClick={(e) => e.preventDefault()}
                         >
                           <img
                             alt="..."
@@ -1180,7 +1180,7 @@ class Sortable extends React.Component {
                           className="avatar avatar-sm rounded-circle"
                           href="#pablo"
                           id="tooltip254060307"
-                          onClick={e => e.preventDefault()}
+                          onClick={(e) => e.preventDefault()}
                         >
                           <img
                             alt="..."
@@ -1197,7 +1197,7 @@ class Sortable extends React.Component {
                           className="avatar avatar-sm rounded-circle"
                           href="#pablo"
                           id="tooltip991744191"
-                          onClick={e => e.preventDefault()}
+                          onClick={(e) => e.preventDefault()}
                         >
                           <img
                             alt="..."
@@ -1214,7 +1214,7 @@ class Sortable extends React.Component {
                           className="avatar avatar-sm rounded-circle"
                           href="#pablo"
                           id="tooltip353476826"
-                          onClick={e => e.preventDefault()}
+                          onClick={(e) => e.preventDefault()}
                         >
                           <img
                             alt="..."
@@ -1231,7 +1231,7 @@ class Sortable extends React.Component {
                           className="avatar avatar-sm rounded-circle"
                           href="#pablo"
                           id="tooltip877941415"
-                          onClick={e => e.preventDefault()}
+                          onClick={(e) => e.preventDefault()}
                         >
                           <img
                             alt="..."
@@ -1267,19 +1267,19 @@ class Sortable extends React.Component {
                         <DropdownMenu className="dropdown-menu-arrow" right>
                           <DropdownItem
                             href="#pablo"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             Action
                           </DropdownItem>
                           <DropdownItem
                             href="#pablo"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             Another action
                           </DropdownItem>
                           <DropdownItem
                             href="#pablo"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             Something else here
                           </DropdownItem>
@@ -1293,7 +1293,7 @@ class Sortable extends React.Component {
                         <a
                           className="avatar rounded-circle mr-3"
                           href="#pablo"
-                          onClick={e => e.preventDefault()}
+                          onClick={(e) => e.preventDefault()}
                         >
                           <img
                             alt="..."
@@ -1320,7 +1320,7 @@ class Sortable extends React.Component {
                           className="avatar avatar-sm rounded-circle"
                           href="#pablo"
                           id="tooltip19030294"
-                          onClick={e => e.preventDefault()}
+                          onClick={(e) => e.preventDefault()}
                         >
                           <img
                             alt="..."
@@ -1334,7 +1334,7 @@ class Sortable extends React.Component {
                           className="avatar avatar-sm rounded-circle"
                           href="#pablo"
                           id="tooltip604086456"
-                          onClick={e => e.preventDefault()}
+                          onClick={(e) => e.preventDefault()}
                         >
                           <img
                             alt="..."
@@ -1351,7 +1351,7 @@ class Sortable extends React.Component {
                           className="avatar avatar-sm rounded-circle"
                           href="#pablo"
                           id="tooltip510726994"
-                          onClick={e => e.preventDefault()}
+                          onClick={(e) => e.preventDefault()}
                         >
                           <img
                             alt="..."
@@ -1368,7 +1368,7 @@ class Sortable extends React.Component {
                           className="avatar avatar-sm rounded-circle"
                           href="#pablo"
                           id="tooltip876582678"
-                          onClick={e => e.preventDefault()}
+                          onClick={(e) => e.preventDefault()}
                         >
                           <img
                             alt="..."
@@ -1404,19 +1404,19 @@ class Sortable extends React.Component {
                         <DropdownMenu className="dropdown-menu-arrow" right>
                           <DropdownItem
                             href="#pablo"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             Action
                           </DropdownItem>
                           <DropdownItem
                             href="#pablo"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             Another action
                           </DropdownItem>
                           <DropdownItem
                             href="#pablo"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             Something else here
                           </DropdownItem>
@@ -1430,7 +1430,7 @@ class Sortable extends React.Component {
                         <a
                           className="avatar rounded-circle mr-3"
                           href="#pablo"
-                          onClick={e => e.preventDefault()}
+                          onClick={(e) => e.preventDefault()}
                         >
                           <img
                             alt="..."
@@ -1457,7 +1457,7 @@ class Sortable extends React.Component {
                           className="avatar avatar-sm rounded-circle"
                           href="#pablo"
                           id="tooltip783780957"
-                          onClick={e => e.preventDefault()}
+                          onClick={(e) => e.preventDefault()}
                         >
                           <img
                             alt="..."
@@ -1474,7 +1474,7 @@ class Sortable extends React.Component {
                           className="avatar avatar-sm rounded-circle"
                           href="#pablo"
                           id="tooltip977578127"
-                          onClick={e => e.preventDefault()}
+                          onClick={(e) => e.preventDefault()}
                         >
                           <img
                             alt="..."
@@ -1491,7 +1491,7 @@ class Sortable extends React.Component {
                           className="avatar avatar-sm rounded-circle"
                           href="#pablo"
                           id="tooltip452431268"
-                          onClick={e => e.preventDefault()}
+                          onClick={(e) => e.preventDefault()}
                         >
                           <img
                             alt="..."
@@ -1508,7 +1508,7 @@ class Sortable extends React.Component {
                           className="avatar avatar-sm rounded-circle"
                           href="#pablo"
                           id="tooltip885071416"
-                          onClick={e => e.preventDefault()}
+                          onClick={(e) => e.preventDefault()}
                         >
                           <img
                             alt="..."
@@ -1544,19 +1544,19 @@ class Sortable extends React.Component {
                         <DropdownMenu className="dropdown-menu-arrow" right>
                           <DropdownItem
                             href="#pablo"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             Action
                           </DropdownItem>
                           <DropdownItem
                             href="#pablo"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             Another action
                           </DropdownItem>
                           <DropdownItem
                             href="#pablo"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             Something else here
                           </DropdownItem>
@@ -1602,7 +1602,7 @@ class Sortable extends React.Component {
                             <a
                               className="avatar rounded-circle mr-3"
                               href="#pablo"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               <img
                                 alt="..."
@@ -1629,7 +1629,7 @@ class Sortable extends React.Component {
                               className="avatar avatar-sm rounded-circle"
                               href="#pablo"
                               id="tooltip467950995"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               <img
                                 alt="..."
@@ -1646,7 +1646,7 @@ class Sortable extends React.Component {
                               className="avatar avatar-sm rounded-circle"
                               href="#pablo"
                               id="tooltip25513321"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               <img
                                 alt="..."
@@ -1663,7 +1663,7 @@ class Sortable extends React.Component {
                               className="avatar avatar-sm rounded-circle"
                               href="#pablo"
                               id="tooltip588943797"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               <img
                                 alt="..."
@@ -1680,7 +1680,7 @@ class Sortable extends React.Component {
                               className="avatar avatar-sm rounded-circle"
                               href="#pablo"
                               id="tooltip856456467"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               <img
                                 alt="..."
@@ -1716,19 +1716,19 @@ class Sortable extends React.Component {
                             <DropdownMenu className="dropdown-menu-arrow" right>
                               <DropdownItem
                                 href="#pablo"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 Action
                               </DropdownItem>
                               <DropdownItem
                                 href="#pablo"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 Another action
                               </DropdownItem>
                               <DropdownItem
                                 href="#pablo"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 Something else here
                               </DropdownItem>
@@ -1742,7 +1742,7 @@ class Sortable extends React.Component {
                             <a
                               className="avatar rounded-circle mr-3"
                               href="#pablo"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               <img
                                 alt="..."
@@ -1769,7 +1769,7 @@ class Sortable extends React.Component {
                               className="avatar avatar-sm rounded-circle"
                               href="#pablo"
                               id="tooltip610334941"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               <img
                                 alt="..."
@@ -1786,7 +1786,7 @@ class Sortable extends React.Component {
                               className="avatar avatar-sm rounded-circle"
                               href="#pablo"
                               id="tooltip213291473"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               <img
                                 alt="..."
@@ -1803,7 +1803,7 @@ class Sortable extends React.Component {
                               className="avatar avatar-sm rounded-circle"
                               href="#pablo"
                               id="tooltip40804711"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               <img
                                 alt="..."
@@ -1820,7 +1820,7 @@ class Sortable extends React.Component {
                               className="avatar avatar-sm rounded-circle"
                               href="#pablo"
                               id="tooltip901162322"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               <img
                                 alt="..."
@@ -1856,19 +1856,19 @@ class Sortable extends React.Component {
                             <DropdownMenu className="dropdown-menu-arrow" right>
                               <DropdownItem
                                 href="#pablo"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 Action
                               </DropdownItem>
                               <DropdownItem
                                 href="#pablo"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 Another action
                               </DropdownItem>
                               <DropdownItem
                                 href="#pablo"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 Something else here
                               </DropdownItem>
@@ -1882,7 +1882,7 @@ class Sortable extends React.Component {
                             <a
                               className="avatar rounded-circle mr-3"
                               href="#pablo"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               <img
                                 alt="..."
@@ -1909,7 +1909,7 @@ class Sortable extends React.Component {
                               className="avatar avatar-sm rounded-circle"
                               href="#pablo"
                               id="tooltip798929192"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               <img
                                 alt="..."
@@ -1926,7 +1926,7 @@ class Sortable extends React.Component {
                               className="avatar avatar-sm rounded-circle"
                               href="#pablo"
                               id="tooltip690674952"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               <img
                                 alt="..."
@@ -1943,7 +1943,7 @@ class Sortable extends React.Component {
                               className="avatar avatar-sm rounded-circle"
                               href="#pablo"
                               id="tooltip497303045"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               <img
                                 alt="..."
@@ -1960,7 +1960,7 @@ class Sortable extends React.Component {
                               className="avatar avatar-sm rounded-circle"
                               href="#pablo"
                               id="tooltip659692799"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               <img
                                 alt="..."
@@ -1996,19 +1996,19 @@ class Sortable extends React.Component {
                             <DropdownMenu className="dropdown-menu-arrow" right>
                               <DropdownItem
                                 href="#pablo"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 Action
                               </DropdownItem>
                               <DropdownItem
                                 href="#pablo"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 Another action
                               </DropdownItem>
                               <DropdownItem
                                 href="#pablo"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 Something else here
                               </DropdownItem>
@@ -2022,7 +2022,7 @@ class Sortable extends React.Component {
                             <a
                               className="avatar rounded-circle mr-3"
                               href="#pablo"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               <img
                                 alt="..."
@@ -2049,7 +2049,7 @@ class Sortable extends React.Component {
                               className="avatar avatar-sm rounded-circle"
                               href="#pablo"
                               id="tooltip828557605"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               <img
                                 alt="..."
@@ -2066,7 +2066,7 @@ class Sortable extends React.Component {
                               className="avatar avatar-sm rounded-circle"
                               href="#pablo"
                               id="tooltip177731438"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               <img
                                 alt="..."
@@ -2083,7 +2083,7 @@ class Sortable extends React.Component {
                               className="avatar avatar-sm rounded-circle"
                               href="#pablo"
                               id="tooltip483706952"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               <img
                                 alt="..."
@@ -2100,7 +2100,7 @@ class Sortable extends React.Component {
                               className="avatar avatar-sm rounded-circle"
                               href="#pablo"
                               id="tooltip310356273"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               <img
                                 alt="..."
@@ -2136,19 +2136,19 @@ class Sortable extends React.Component {
                             <DropdownMenu className="dropdown-menu-arrow" right>
                               <DropdownItem
                                 href="#pablo"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 Action
                               </DropdownItem>
                               <DropdownItem
                                 href="#pablo"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 Another action
                               </DropdownItem>
                               <DropdownItem
                                 href="#pablo"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 Something else here
                               </DropdownItem>
@@ -2162,7 +2162,7 @@ class Sortable extends React.Component {
                             <a
                               className="avatar rounded-circle mr-3"
                               href="#pablo"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               <img
                                 alt="..."
@@ -2189,7 +2189,7 @@ class Sortable extends React.Component {
                               className="avatar avatar-sm rounded-circle"
                               href="#pablo"
                               id="tooltip946916389"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               <img
                                 alt="..."
@@ -2206,7 +2206,7 @@ class Sortable extends React.Component {
                               className="avatar avatar-sm rounded-circle"
                               href="#pablo"
                               id="tooltip571882927"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               <img
                                 alt="..."
@@ -2223,7 +2223,7 @@ class Sortable extends React.Component {
                               className="avatar avatar-sm rounded-circle"
                               href="#pablo"
                               id="tooltip363766624"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               <img
                                 alt="..."
@@ -2240,7 +2240,7 @@ class Sortable extends React.Component {
                               className="avatar avatar-sm rounded-circle"
                               href="#pablo"
                               id="tooltip282084973"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               <img
                                 alt="..."
@@ -2276,19 +2276,19 @@ class Sortable extends React.Component {
                             <DropdownMenu className="dropdown-menu-arrow" right>
                               <DropdownItem
                                 href="#pablo"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 Action
                               </DropdownItem>
                               <DropdownItem
                                 href="#pablo"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 Another action
                               </DropdownItem>
                               <DropdownItem
                                 href="#pablo"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 Something else here
                               </DropdownItem>

@@ -31,10 +31,10 @@ import {
   ListGroup,
   Container,
   Row,
-  Col
+  Col,
 } from "reactstrap";
 // core components
-import CardsHeader from "components/Headers/CardsHeader.js";
+import CardsHeader from "components/headers/CardsHeader.js";
 
 class Cards extends React.Component {
   render() {
@@ -70,7 +70,7 @@ class Cards extends React.Component {
                   <Button
                     color="primary"
                     href="#pablo"
-                    onClick={e => e.preventDefault()}
+                    onClick={(e) => e.preventDefault()}
                   >
                     Go somewhere
                   </Button>
@@ -91,7 +91,7 @@ class Cards extends React.Component {
                   <Button
                     color="primary"
                     href="#pablo"
-                    onClick={e => e.preventDefault()}
+                    onClick={(e) => e.preventDefault()}
                   >
                     Go somewhere
                   </Button>
@@ -107,7 +107,7 @@ class Cards extends React.Component {
                 <Row className="justify-content-center">
                   <Col className="order-lg-2" lg="3">
                     <div className="card-profile-image">
-                      <a href="#pablo" onClick={e => e.preventDefault()}>
+                      <a href="#pablo" onClick={(e) => e.preventDefault()}>
                         <img
                           alt="..."
                           className="rounded-circle"
@@ -123,7 +123,7 @@ class Cards extends React.Component {
                       className="mr-4"
                       color="info"
                       href="#pablo"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                       size="sm"
                     >
                       Connect
@@ -132,7 +132,7 @@ class Cards extends React.Component {
                       className="float-right"
                       color="default"
                       href="#pablo"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                       size="sm"
                     >
                       Message
@@ -187,7 +187,7 @@ class Cards extends React.Component {
                   <Button
                     color="primary"
                     href="#pablo"
-                    onClick={e => e.preventDefault()}
+                    onClick={(e) => e.preventDefault()}
                   >
                     Go somewhere
                   </Button>
@@ -201,7 +201,7 @@ class Cards extends React.Component {
                       <a
                         className="avatar avatar-xl rounded-circle"
                         href="#pablo"
-                        onClick={e => e.preventDefault()}
+                        onClick={(e) => e.preventDefault()}
                       >
                         <img
                           alt="..."
@@ -211,7 +211,7 @@ class Cards extends React.Component {
                     </Col>
                     <div className="col ml--2">
                       <h4 className="mb-0">
-                        <a href="#pablo" onClick={e => e.preventDefault()}>
+                        <a href="#pablo" onClick={(e) => e.preventDefault()}>
                           John Snow
                         </a>
                       </h4>
@@ -232,7 +232,7 @@ class Cards extends React.Component {
 
               <Card>
                 <CardBody>
-                  <a href="#pablo" onClick={e => e.preventDefault()}>
+                  <a href="#pablo" onClick={(e) => e.preventDefault()}>
                     <img
                       alt="..."
                       className="rounded-circle img-center img-fluid shadow shadow-lg--hover"
@@ -252,7 +252,7 @@ class Cards extends React.Component {
                         className="btn-icon-only rounded-circle"
                         color="twitter"
                         href="#pablo"
-                        onClick={e => e.preventDefault()}
+                        onClick={(e) => e.preventDefault()}
                       >
                         <i className="fab fa-twitter" />
                       </Button>
@@ -260,7 +260,7 @@ class Cards extends React.Component {
                         className="btn-icon-only rounded-circle"
                         color="facebook"
                         href="#pablo"
-                        onClick={e => e.preventDefault()}
+                        onClick={(e) => e.preventDefault()}
                       >
                         <i className="fab fa-facebook" />
                       </Button>
@@ -268,7 +268,7 @@ class Cards extends React.Component {
                         className="btn-icon-only rounded-circle"
                         color="dribbble"
                         href="#pablo"
-                        onClick={e => e.preventDefault()}
+                        onClick={(e) => e.preventDefault()}
                       >
                         <i className="fab fa-dribbble" />
                       </Button>
@@ -299,7 +299,7 @@ class Cards extends React.Component {
                     className="px-0"
                     color="link"
                     href="#pablo"
-                    onClick={e => e.preventDefault()}
+                    onClick={(e) => e.preventDefault()}
                   >
                     View article
                   </Button>
@@ -386,7 +386,7 @@ class Cards extends React.Component {
                   <a
                     className="text-white"
                     href="#pablo"
-                    onClick={e => e.preventDefault()}
+                    onClick={(e) => e.preventDefault()}
                   >
                     Request a demo
                   </a>
@@ -404,7 +404,7 @@ class Cards extends React.Component {
                         className="btn-neutral"
                         color="default"
                         href="#pablo"
-                        onClick={e => e.preventDefault()}
+                        onClick={(e) => e.preventDefault()}
                         size="sm"
                       >
                         Action
@@ -423,7 +423,7 @@ class Cards extends React.Component {
                   <Button
                     color="primary"
                     href="#pablo"
-                    onClick={e => e.preventDefault()}
+                    onClick={(e) => e.preventDefault()}
                   >
                     Go somewhere
                   </Button>
@@ -513,7 +513,7 @@ class Cards extends React.Component {
                   <a
                     className="text-muted"
                     href="#pablo"
-                    onClick={e => e.preventDefault()}
+                    onClick={(e) => e.preventDefault()}
                   >
                     Request a demo
                   </a>

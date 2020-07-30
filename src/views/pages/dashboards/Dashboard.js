@@ -45,17 +45,17 @@ import {
   Container,
   Row,
   Col,
-  UncontrolledTooltip
+  UncontrolledTooltip,
 } from "reactstrap";
 
 // core components
-import CardsHeader from "components/Headers/CardsHeader.js";
+import CardsHeader from "components/headers/CardsHeader.js";
 
 import {
   chartOptions,
   parseOptions,
   chartExample1,
-  chartExample2
+  chartExample2,
 } from "variables/charts.js";
 
 class Dashboard extends React.Component {
@@ -63,7 +63,7 @@ class Dashboard extends React.Component {
     super(props);
     this.state = {
       activeNav: 1,
-      chartExample1Data: "data1"
+      chartExample1Data: "data1",
     };
     if (window.Chart) {
       parseOptions(Chart, chartOptions());
@@ -74,7 +74,7 @@ class Dashboard extends React.Component {
     this.setState({
       activeNav: index,
       chartExample1Data:
-        this.state.chartExample1Data === "data1" ? "data2" : "data1"
+        this.state.chartExample1Data === "data1" ? "data2" : "data1",
     });
   };
   render() {
@@ -98,10 +98,10 @@ class Dashboard extends React.Component {
                         <NavItem className="mr-2 mr-md-0">
                           <NavLink
                             className={classnames("py-2 px-3", {
-                              active: this.state.activeNav === 1
+                              active: this.state.activeNav === 1,
                             })}
                             href="#pablo"
-                            onClick={e => this.toggleNavs(e, 1)}
+                            onClick={(e) => this.toggleNavs(e, 1)}
                           >
                             <span className="d-none d-md-block">Month</span>
                             <span className="d-md-none">M</span>
@@ -110,11 +110,11 @@ class Dashboard extends React.Component {
                         <NavItem>
                           <NavLink
                             className={classnames("py-2 px-3", {
-                              active: this.state.activeNav === 2
+                              active: this.state.activeNav === 2,
                             })}
                             data-toggle="tab"
                             href="#pablo"
-                            onClick={e => this.toggleNavs(e, 2)}
+                            onClick={(e) => this.toggleNavs(e, 2)}
                           >
                             <span className="d-none d-md-block">Week</span>
                             <span className="d-md-none">W</span>
@@ -176,7 +176,7 @@ class Dashboard extends React.Component {
                           <a
                             className="avatar rounded-circle"
                             href="#pablo"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -186,7 +186,10 @@ class Dashboard extends React.Component {
                         </Col>
                         <div className="col ml--2">
                           <h4 className="mb-0">
-                            <a href="#pablo" onClick={e => e.preventDefault()}>
+                            <a
+                              href="#pablo"
+                              onClick={(e) => e.preventDefault()}
+                            >
                               John Michael
                             </a>
                           </h4>
@@ -206,7 +209,7 @@ class Dashboard extends React.Component {
                           <a
                             className="avatar rounded-circle"
                             href="#pablo"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -216,7 +219,10 @@ class Dashboard extends React.Component {
                         </Col>
                         <div className="col ml--2">
                           <h4 className="mb-0">
-                            <a href="#pablo" onClick={e => e.preventDefault()}>
+                            <a
+                              href="#pablo"
+                              onClick={(e) => e.preventDefault()}
+                            >
                               Alex Smith
                             </a>
                           </h4>
@@ -236,7 +242,7 @@ class Dashboard extends React.Component {
                           <a
                             className="avatar rounded-circle"
                             href="#pablo"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -246,7 +252,10 @@ class Dashboard extends React.Component {
                         </Col>
                         <div className="col ml--2">
                           <h4 className="mb-0">
-                            <a href="#pablo" onClick={e => e.preventDefault()}>
+                            <a
+                              href="#pablo"
+                              onClick={(e) => e.preventDefault()}
+                            >
                               Samantha Ivy
                             </a>
                           </h4>
@@ -266,7 +275,7 @@ class Dashboard extends React.Component {
                           <a
                             className="avatar rounded-circle"
                             href="#pablo"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -276,7 +285,10 @@ class Dashboard extends React.Component {
                         </Col>
                         <div className="col ml--2">
                           <h4 className="mb-0">
-                            <a href="#pablo" onClick={e => e.preventDefault()}>
+                            <a
+                              href="#pablo"
+                              onClick={(e) => e.preventDefault()}
+                            >
                               John Michael
                             </a>
                           </h4>
@@ -414,7 +426,7 @@ class Dashboard extends React.Component {
                           <a
                             className="avatar rounded-circle"
                             href="#pablo"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -439,7 +451,7 @@ class Dashboard extends React.Component {
                           <a
                             className="avatar rounded-circle"
                             href="#pablo"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -464,7 +476,7 @@ class Dashboard extends React.Component {
                           <a
                             className="avatar rounded-circle"
                             href="#pablo"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -489,7 +501,7 @@ class Dashboard extends React.Component {
                           <a
                             className="avatar rounded-circle"
                             href="#pablo"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -521,7 +533,7 @@ class Dashboard extends React.Component {
                 </CardHeader>
                 <CardHeader className="d-flex align-items-center">
                   <div className="d-flex align-items-center">
-                    <a href="#pablo" onClick={e => e.preventDefault()}>
+                    <a href="#pablo" onClick={(e) => e.preventDefault()}>
                       <img
                         alt="..."
                         className="avatar"
@@ -532,7 +544,7 @@ class Dashboard extends React.Component {
                       <a
                         className="text-dark font-weight-600 text-sm"
                         href="#pablo"
-                        onClick={e => e.preventDefault()}
+                        onClick={(e) => e.preventDefault()}
                       >
                         John Snow
                       </a>
@@ -571,16 +583,16 @@ class Dashboard extends React.Component {
                         <a
                           className="like active"
                           href="#pablo"
-                          onClick={e => e.preventDefault()}
+                          onClick={(e) => e.preventDefault()}
                         >
                           <i className="ni ni-like-2" />
                           <span className="text-muted">150</span>
                         </a>
-                        <a href="#pablo" onClick={e => e.preventDefault()}>
+                        <a href="#pablo" onClick={(e) => e.preventDefault()}>
                           <i className="ni ni-chat-round" />
                           <span className="text-muted">36</span>
                         </a>
-                        <a href="#pablo" onClick={e => e.preventDefault()}>
+                        <a href="#pablo" onClick={(e) => e.preventDefault()}>
                           <i className="ni ni-curved-next" />
                           <span className="text-muted">12</span>
                         </a>
@@ -593,7 +605,7 @@ class Dashboard extends React.Component {
                             className="avatar avatar-xs rounded-circle"
                             href="#pablo"
                             id="tooltip36177092"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -610,7 +622,7 @@ class Dashboard extends React.Component {
                             className="avatar avatar-xs rounded-circle"
                             href="#pablo"
                             id="tooltip857639221"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -628,7 +640,7 @@ class Dashboard extends React.Component {
                             className="avatar avatar-xs rounded-circle"
                             href="#pablo"
                             id="tooltip260223080"
-                            onClick={e => e.preventDefault()}
+                            onClick={(e) => e.preventDefault()}
                           >
                             <img
                               alt="..."
@@ -669,12 +681,15 @@ class Dashboard extends React.Component {
                             <a
                               className="like active"
                               href="#pablo"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               <i className="ni ni-like-2" />
                               <span className="text-muted">3 likes</span>
                             </a>
-                            <a href="#pablo" onClick={e => e.preventDefault()}>
+                            <a
+                              href="#pablo"
+                              onClick={(e) => e.preventDefault()}
+                            >
                               <i className="ni ni-curved-next" />
                               <span className="text-muted">2 shares</span>
                             </a>
@@ -701,12 +716,15 @@ class Dashboard extends React.Component {
                             <a
                               className="like active"
                               href="#pablo"
-                              onClick={e => e.preventDefault()}
+                              onClick={(e) => e.preventDefault()}
                             >
                               <i className="ni ni-like-2" />
                               <span className="text-muted">10 likes</span>
                             </a>
-                            <a href="#pablo" onClick={e => e.preventDefault()}>
+                            <a
+                              href="#pablo"
+                              onClick={(e) => e.preventDefault()}
+                            >
                               <i className="ni ni-curved-next" />
                               <span className="text-muted">1 share</span>
                             </a>
@@ -775,7 +793,7 @@ class Dashboard extends React.Component {
                               <a
                                 className="avatar rounded-circle mr-3"
                                 href="#pablo"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 <img
                                   alt="..."
@@ -802,7 +820,7 @@ class Dashboard extends React.Component {
                                 className="avatar avatar-sm rounded-circle"
                                 href="#pablo"
                                 id="tooltip792717700"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 <img
                                   alt="..."
@@ -819,7 +837,7 @@ class Dashboard extends React.Component {
                                 className="avatar avatar-sm rounded-circle"
                                 href="#pablo"
                                 id="tooltip654289872"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 <img
                                   alt="..."
@@ -836,7 +854,7 @@ class Dashboard extends React.Component {
                                 className="avatar avatar-sm rounded-circle"
                                 href="#pablo"
                                 id="tooltip409131762"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 <img
                                   alt="..."
@@ -853,7 +871,7 @@ class Dashboard extends React.Component {
                                 className="avatar avatar-sm rounded-circle"
                                 href="#pablo"
                                 id="tooltip50788433"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 <img
                                   alt="..."
@@ -895,19 +913,19 @@ class Dashboard extends React.Component {
                               >
                                 <DropdownItem
                                   href="#pablo"
-                                  onClick={e => e.preventDefault()}
+                                  onClick={(e) => e.preventDefault()}
                                 >
                                   Action
                                 </DropdownItem>
                                 <DropdownItem
                                   href="#pablo"
-                                  onClick={e => e.preventDefault()}
+                                  onClick={(e) => e.preventDefault()}
                                 >
                                   Another action
                                 </DropdownItem>
                                 <DropdownItem
                                   href="#pablo"
-                                  onClick={e => e.preventDefault()}
+                                  onClick={(e) => e.preventDefault()}
                                 >
                                   Something else here
                                 </DropdownItem>
@@ -921,7 +939,7 @@ class Dashboard extends React.Component {
                               <a
                                 className="avatar rounded-circle mr-3"
                                 href="#pablo"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 <img
                                   alt="..."
@@ -948,7 +966,7 @@ class Dashboard extends React.Component {
                                 className="avatar avatar-sm rounded-circle"
                                 href="#pablo"
                                 id="tooltip545726644"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 <img
                                   alt="..."
@@ -965,7 +983,7 @@ class Dashboard extends React.Component {
                                 className="avatar avatar-sm rounded-circle"
                                 href="#pablo"
                                 id="tooltip823332447"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 <img
                                   alt="..."
@@ -982,7 +1000,7 @@ class Dashboard extends React.Component {
                                 className="avatar avatar-sm rounded-circle"
                                 href="#pablo"
                                 id="tooltip354076640"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 <img
                                   alt="..."
@@ -999,7 +1017,7 @@ class Dashboard extends React.Component {
                                 className="avatar avatar-sm rounded-circle"
                                 href="#pablo"
                                 id="tooltip625572621"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 <img
                                   alt="..."
@@ -1041,19 +1059,19 @@ class Dashboard extends React.Component {
                               >
                                 <DropdownItem
                                   href="#pablo"
-                                  onClick={e => e.preventDefault()}
+                                  onClick={(e) => e.preventDefault()}
                                 >
                                   Action
                                 </DropdownItem>
                                 <DropdownItem
                                   href="#pablo"
-                                  onClick={e => e.preventDefault()}
+                                  onClick={(e) => e.preventDefault()}
                                 >
                                   Another action
                                 </DropdownItem>
                                 <DropdownItem
                                   href="#pablo"
-                                  onClick={e => e.preventDefault()}
+                                  onClick={(e) => e.preventDefault()}
                                 >
                                   Something else here
                                 </DropdownItem>
@@ -1067,7 +1085,7 @@ class Dashboard extends React.Component {
                               <a
                                 className="avatar rounded-circle mr-3"
                                 href="#pablo"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 <img
                                   alt="..."
@@ -1094,7 +1112,7 @@ class Dashboard extends React.Component {
                                 className="avatar avatar-sm rounded-circle"
                                 href="#pablo"
                                 id="tooltip927457712"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 <img
                                   alt="..."
@@ -1111,7 +1129,7 @@ class Dashboard extends React.Component {
                                 className="avatar avatar-sm rounded-circle"
                                 href="#pablo"
                                 id="tooltip959509788"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 <img
                                   alt="..."
@@ -1128,7 +1146,7 @@ class Dashboard extends React.Component {
                                 className="avatar avatar-sm rounded-circle"
                                 href="#pablo"
                                 id="tooltip239649821"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 <img
                                   alt="..."
@@ -1145,7 +1163,7 @@ class Dashboard extends React.Component {
                                 className="avatar avatar-sm rounded-circle"
                                 href="#pablo"
                                 id="tooltip908443321"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 <img
                                   alt="..."
@@ -1183,19 +1201,19 @@ class Dashboard extends React.Component {
                               >
                                 <DropdownItem
                                   href="#pablo"
-                                  onClick={e => e.preventDefault()}
+                                  onClick={(e) => e.preventDefault()}
                                 >
                                   Action
                                 </DropdownItem>
                                 <DropdownItem
                                   href="#pablo"
-                                  onClick={e => e.preventDefault()}
+                                  onClick={(e) => e.preventDefault()}
                                 >
                                   Another action
                                 </DropdownItem>
                                 <DropdownItem
                                   href="#pablo"
-                                  onClick={e => e.preventDefault()}
+                                  onClick={(e) => e.preventDefault()}
                                 >
                                   Something else here
                                 </DropdownItem>
@@ -1209,7 +1227,7 @@ class Dashboard extends React.Component {
                               <a
                                 className="avatar rounded-circle mr-3"
                                 href="#pablo"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 <img
                                   alt="..."
@@ -1236,7 +1254,7 @@ class Dashboard extends React.Component {
                                 className="avatar avatar-sm rounded-circle"
                                 href="#pablo"
                                 id="tooltip817843622"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 <img
                                   alt="..."
@@ -1253,7 +1271,7 @@ class Dashboard extends React.Component {
                                 className="avatar avatar-sm rounded-circle"
                                 href="#pablo"
                                 id="tooltip885824111"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 <img
                                   alt="..."
@@ -1270,7 +1288,7 @@ class Dashboard extends React.Component {
                                 className="avatar avatar-sm rounded-circle"
                                 href="#pablo"
                                 id="tooltip426851535"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 <img
                                   alt="..."
@@ -1287,7 +1305,7 @@ class Dashboard extends React.Component {
                                 className="avatar avatar-sm rounded-circle"
                                 href="#pablo"
                                 id="tooltip913358720"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 <img
                                   alt="..."
@@ -1325,19 +1343,19 @@ class Dashboard extends React.Component {
                               >
                                 <DropdownItem
                                   href="#pablo"
-                                  onClick={e => e.preventDefault()}
+                                  onClick={(e) => e.preventDefault()}
                                 >
                                   Action
                                 </DropdownItem>
                                 <DropdownItem
                                   href="#pablo"
-                                  onClick={e => e.preventDefault()}
+                                  onClick={(e) => e.preventDefault()}
                                 >
                                   Another action
                                 </DropdownItem>
                                 <DropdownItem
                                   href="#pablo"
-                                  onClick={e => e.preventDefault()}
+                                  onClick={(e) => e.preventDefault()}
                                 >
                                   Something else here
                                 </DropdownItem>
@@ -1351,7 +1369,7 @@ class Dashboard extends React.Component {
                               <a
                                 className="avatar rounded-circle mr-3"
                                 href="#pablo"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 <img
                                   alt="..."
@@ -1378,7 +1396,7 @@ class Dashboard extends React.Component {
                                 className="avatar avatar-sm rounded-circle"
                                 href="#pablo"
                                 id="tooltip460474820"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 <img
                                   alt="..."
@@ -1395,7 +1413,7 @@ class Dashboard extends React.Component {
                                 className="avatar avatar-sm rounded-circle"
                                 href="#pablo"
                                 id="tooltip979995688"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 <img
                                   alt="..."
@@ -1412,7 +1430,7 @@ class Dashboard extends React.Component {
                                 className="avatar avatar-sm rounded-circle"
                                 href="#pablo"
                                 id="tooltip732882700"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 <img
                                   alt="..."
@@ -1429,7 +1447,7 @@ class Dashboard extends React.Component {
                                 className="avatar avatar-sm rounded-circle"
                                 href="#pablo"
                                 id="tooltip242724387"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 <img
                                   alt="..."
@@ -1471,19 +1489,19 @@ class Dashboard extends React.Component {
                               >
                                 <DropdownItem
                                   href="#pablo"
-                                  onClick={e => e.preventDefault()}
+                                  onClick={(e) => e.preventDefault()}
                                 >
                                   Action
                                 </DropdownItem>
                                 <DropdownItem
                                   href="#pablo"
-                                  onClick={e => e.preventDefault()}
+                                  onClick={(e) => e.preventDefault()}
                                 >
                                   Another action
                                 </DropdownItem>
                                 <DropdownItem
                                   href="#pablo"
-                                  onClick={e => e.preventDefault()}
+                                  onClick={(e) => e.preventDefault()}
                                 >
                                   Something else here
                                 </DropdownItem>
@@ -1497,7 +1515,7 @@ class Dashboard extends React.Component {
                               <a
                                 className="avatar rounded-circle mr-3"
                                 href="#pablo"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 <img
                                   alt="..."
@@ -1524,7 +1542,7 @@ class Dashboard extends React.Component {
                                 className="avatar avatar-sm rounded-circle"
                                 href="#pablo"
                                 id="tooltip318080952"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 <img
                                   alt="..."
@@ -1541,7 +1559,7 @@ class Dashboard extends React.Component {
                                 className="avatar avatar-sm rounded-circle"
                                 href="#pablo"
                                 id="tooltip221723068"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 <img
                                   alt="..."
@@ -1558,7 +1576,7 @@ class Dashboard extends React.Component {
                                 className="avatar avatar-sm rounded-circle"
                                 href="#pablo"
                                 id="tooltip138748612"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 <img
                                   alt="..."
@@ -1575,7 +1593,7 @@ class Dashboard extends React.Component {
                                 className="avatar avatar-sm rounded-circle"
                                 href="#pablo"
                                 id="tooltip431342349"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 <img
                                   alt="..."
@@ -1617,19 +1635,19 @@ class Dashboard extends React.Component {
                               >
                                 <DropdownItem
                                   href="#pablo"
-                                  onClick={e => e.preventDefault()}
+                                  onClick={(e) => e.preventDefault()}
                                 >
                                   Action
                                 </DropdownItem>
                                 <DropdownItem
                                   href="#pablo"
-                                  onClick={e => e.preventDefault()}
+                                  onClick={(e) => e.preventDefault()}
                                 >
                                   Another action
                                 </DropdownItem>
                                 <DropdownItem
                                   href="#pablo"
-                                  onClick={e => e.preventDefault()}
+                                  onClick={(e) => e.preventDefault()}
                                 >
                                   Something else here
                                 </DropdownItem>
@@ -1643,7 +1661,7 @@ class Dashboard extends React.Component {
                               <a
                                 className="avatar rounded-circle mr-3"
                                 href="#pablo"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 <img
                                   alt="..."
@@ -1670,7 +1688,7 @@ class Dashboard extends React.Component {
                                 className="avatar avatar-sm rounded-circle"
                                 href="#pablo"
                                 id="tooltip384464413"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 <img
                                   alt="..."
@@ -1687,7 +1705,7 @@ class Dashboard extends React.Component {
                                 className="avatar avatar-sm rounded-circle"
                                 href="#pablo"
                                 id="tooltip828512937"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 <img
                                   alt="..."
@@ -1704,7 +1722,7 @@ class Dashboard extends React.Component {
                                 className="avatar avatar-sm rounded-circle"
                                 href="#pablo"
                                 id="tooltip409745485"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 <img
                                   alt="..."
@@ -1721,7 +1739,7 @@ class Dashboard extends React.Component {
                                 className="avatar avatar-sm rounded-circle"
                                 href="#pablo"
                                 id="tooltip262162858"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 <img
                                   alt="..."
@@ -1763,19 +1781,19 @@ class Dashboard extends React.Component {
                               >
                                 <DropdownItem
                                   href="#pablo"
-                                  onClick={e => e.preventDefault()}
+                                  onClick={(e) => e.preventDefault()}
                                 >
                                   Action
                                 </DropdownItem>
                                 <DropdownItem
                                   href="#pablo"
-                                  onClick={e => e.preventDefault()}
+                                  onClick={(e) => e.preventDefault()}
                                 >
                                   Another action
                                 </DropdownItem>
                                 <DropdownItem
                                   href="#pablo"
-                                  onClick={e => e.preventDefault()}
+                                  onClick={(e) => e.preventDefault()}
                                 >
                                   Something else here
                                 </DropdownItem>
@@ -1789,7 +1807,7 @@ class Dashboard extends React.Component {
                               <a
                                 className="avatar rounded-circle mr-3"
                                 href="#pablo"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 <img
                                   alt="..."
@@ -1816,7 +1834,7 @@ class Dashboard extends React.Component {
                                 className="avatar avatar-sm rounded-circle"
                                 href="#pablo"
                                 id="tooltip711925042"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 <img
                                   alt="..."
@@ -1833,7 +1851,7 @@ class Dashboard extends React.Component {
                                 className="avatar avatar-sm rounded-circle"
                                 href="#pablo"
                                 id="tooltip664693924"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 <img
                                   alt="..."
@@ -1850,7 +1868,7 @@ class Dashboard extends React.Component {
                                 className="avatar avatar-sm rounded-circle"
                                 href="#pablo"
                                 id="tooltip582913491"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 <img
                                   alt="..."
@@ -1867,7 +1885,7 @@ class Dashboard extends React.Component {
                                 className="avatar avatar-sm rounded-circle"
                                 href="#pablo"
                                 id="tooltip699784330"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 <img
                                   alt="..."
@@ -1905,19 +1923,19 @@ class Dashboard extends React.Component {
                               >
                                 <DropdownItem
                                   href="#pablo"
-                                  onClick={e => e.preventDefault()}
+                                  onClick={(e) => e.preventDefault()}
                                 >
                                   Action
                                 </DropdownItem>
                                 <DropdownItem
                                   href="#pablo"
-                                  onClick={e => e.preventDefault()}
+                                  onClick={(e) => e.preventDefault()}
                                 >
                                   Another action
                                 </DropdownItem>
                                 <DropdownItem
                                   href="#pablo"
-                                  onClick={e => e.preventDefault()}
+                                  onClick={(e) => e.preventDefault()}
                                 >
                                   Something else here
                                 </DropdownItem>
@@ -1931,7 +1949,7 @@ class Dashboard extends React.Component {
                               <a
                                 className="avatar rounded-circle mr-3"
                                 href="#pablo"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 <img
                                   alt="..."
@@ -1958,7 +1976,7 @@ class Dashboard extends React.Component {
                                 className="avatar avatar-sm rounded-circle"
                                 href="#pablo"
                                 id="tooltip912421317"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 <img
                                   alt="..."
@@ -1975,7 +1993,7 @@ class Dashboard extends React.Component {
                                 className="avatar avatar-sm rounded-circle"
                                 href="#pablo"
                                 id="tooltip912012329"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 <img
                                   alt="..."
@@ -1992,7 +2010,7 @@ class Dashboard extends React.Component {
                                 className="avatar avatar-sm rounded-circle"
                                 href="#pablo"
                                 id="tooltip366509724"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 <img
                                   alt="..."
@@ -2009,7 +2027,7 @@ class Dashboard extends React.Component {
                                 className="avatar avatar-sm rounded-circle"
                                 href="#pablo"
                                 id="tooltip569311457"
-                                onClick={e => e.preventDefault()}
+                                onClick={(e) => e.preventDefault()}
                               >
                                 <img
                                   alt="..."
@@ -2051,19 +2069,19 @@ class Dashboard extends React.Component {
                               >
                                 <DropdownItem
                                   href="#pablo"
-                                  onClick={e => e.preventDefault()}
+                                  onClick={(e) => e.preventDefault()}
                                 >
                                   Action
                                 </DropdownItem>
                                 <DropdownItem
                                   href="#pablo"
-                                  onClick={e => e.preventDefault()}
+                                  onClick={(e) => e.preventDefault()}
                                 >
                                   Another action
                                 </DropdownItem>
                                 <DropdownItem
                                   href="#pablo"
-                                  onClick={e => e.preventDefault()}
+                                  onClick={(e) => e.preventDefault()}
                                 >
                                   Something else here
                                 </DropdownItem>
@@ -2166,7 +2184,7 @@ class Dashboard extends React.Component {
                       <Button
                         color="primary"
                         href="#pablo"
-                        onClick={e => e.preventDefault()}
+                        onClick={(e) => e.preventDefault()}
                         size="sm"
                       >
                         See all
@@ -2244,7 +2262,7 @@ class Dashboard extends React.Component {
                       <Button
                         color="primary"
                         href="#pablo"
-                        onClick={e => e.preventDefault()}
+                        onClick={(e) => e.preventDefault()}
                         size="sm"
                       >
                         See all
