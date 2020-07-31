@@ -5,6 +5,5 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - TESTT='http://localhost:3001'
-      - GRAPHQL_API_URI='${GRAPHQL_API_URI}'
-      - APP_URI='http://localhost:3000'
+      - NODE_ENV=development
+      - REACT_APP_GRAPHQL_API_URI=${GRAPHQL_API_URI}
