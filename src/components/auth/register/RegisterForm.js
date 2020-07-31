@@ -206,14 +206,18 @@ const RegisterForm = () => {
                   ))}
                 </div>
               )}
-              <div className="text-muted font-italic pl-1 mt-2">
-                <small>
-                  Password strength:{" "}
-                  <span className={`text-strong ${getPasswordStrengthColor()}`}>
-                    <strong>{getPasswordStrengthText()}</strong>
-                  </span>
-                </small>
-              </div>
+              {formState && formState.dirtyFields["password"] && (
+                <div className="text-muted font-italic pl-1 mt-2">
+                  <small>
+                    Password strength:{" "}
+                    <span
+                      className={`text-strong ${getPasswordStrengthColor()}`}
+                    >
+                      <strong>{getPasswordStrengthText()}</strong>
+                    </span>
+                  </small>
+                </div>
+              )}
               {state.isSuccessful && (
                 <>
                   <div className="mt-2 pl-1">
@@ -225,31 +229,6 @@ const RegisterForm = () => {
                 </>
               )}
             </FormGroup>
-            <Row className="my-4">
-              <Col xs="12">
-                <div className="custom-control custom-control-alternative custom-checkbox">
-                  <input
-                    className="custom-control-input"
-                    id="customCheckRegister"
-                    type="checkbox"
-                  />
-                  <label
-                    className="custom-control-label"
-                    htmlFor="customCheckRegister"
-                  >
-                    <span className="text-muted">
-                      I agree with the{" "}
-                      <a
-                        href="#pablo"
-                        onClick={(event) => event.preventDefault()}
-                      >
-                        Privacy Policy
-                      </a>
-                    </span>
-                  </label>
-                </div>
-              </Col>
-            </Row>
             <div className="text-center">
               <Button
                 className="mt-4"
