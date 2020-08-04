@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { useHistory } from "react-router-dom";
 import classnames from "classnames";
 import {
   Collapse,
@@ -26,6 +27,7 @@ import {
 
 import useLogOutMutation from "../auth/graphql/useLogOutMutation";
 import { Context } from "../../store/Store";
+import { clearAllTokens } from "../../store/auth/auth-manager";
 
 const initialProps = {
   toggleSidenav: () => {},
@@ -34,15 +36,26 @@ const initialProps = {
 };
 
 const AdminNavbar = (props = initialProps) => {
-  // eslint-disable-next-line
-  const [globalState, dispatch] = useContext(Context);
+  let history = useHistory();
 
-  const [logOutMutation] = useLogOutMutation();
+  /* eslint-disable */
+  const [
+    globalState,
+    dispatch,
+    setUserAuthData,
+    clearUserAuthData,
+  ] = useContext(Context);
+  /* eslint-enable */
+
+  const [logOutMutation, { client }] = useLogOutMutation();
 
   const onLogout = async (event) => {
     event.preventDefault();
-    await logOutMutation();
-    window.location.reload();
+    clearUserAuthData(logOutMutation);
+    clearAllTokens();
+    client.resetStore();
+
+    history.push("/login");
   };
 
   // function that on mobile devices makes the search open

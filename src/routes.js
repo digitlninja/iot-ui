@@ -1,6 +1,7 @@
 import Dashboard from "views/pages/dashboards/Dashboard.js";
 import Login from "views/pages/auth/Login.js";
 import Register from "views/pages/auth/Register.js";
+import Profile from "views/pages/examples/Profile.js";
 import Error from "views/pages/Error.js";
 
 const routes = [
@@ -11,7 +12,7 @@ const routes = [
     icon: "ni ni-shop text-primary",
     component: Dashboard,
     state: "dashboardsCollapse",
-    layout: "/admin",
+    // layout: "/admin",
     isSideNavItem: true,
   },
   {
@@ -20,21 +21,28 @@ const routes = [
     icon: "ni ni-shop text-primary",
     component: Register,
     state: "dashboardsCollapse",
-    layout: "/admin",
+    // layout: "/admin",
     isSideNavItem: false,
   },
   {
     path: "/login",
     name: "Login",
     component: Login,
-    layout: "/admin",
+    // layout: "/admin",
     isSideNavItem: false,
+  },
+  {
+    path: "/users",
+    name: "Users",
+    component: Profile,
+    // layout: "/admin",
+    isSideNavItem: true,
   },
   {
     path: "/error",
     name: "Error",
     component: Error,
-    layout: "/admin",
+    // layout: "/admin",
     isSideNavItem: false,
   },
   {
@@ -49,14 +57,14 @@ const routes = [
         name: "Login",
         miniName: "L",
         component: Login,
-        layout: "/auth",
+        // layout: "/auth",
       },
       {
         path: "/register",
         name: "Register",
         miniName: "R",
         component: Register,
-        layout: "/auth",
+        // layout: "/auth",
       },
     ],
   },

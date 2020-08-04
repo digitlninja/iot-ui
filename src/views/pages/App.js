@@ -13,19 +13,21 @@ import "assets/vendor/@fortawesome/fontawesome-free/css/all.min.css";
 import "assets/scss/argon-dashboard-pro-react.scss?v1.1.0";
 import "assets/css/styles.css";
 
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 
 import IoTApp from "./IoTApp";
 import ApolloClient from "../../apollo/main";
 import Store from "../../store/Store";
 
-const App = () => (
-  <Store>
-    <BrowserRouter>
-      <ApolloClient>
-        <IoTApp />
-      </ApolloClient>
-    </BrowserRouter>
-  </Store>
-);
+const App = () => {
+  return (
+    <Store>
+      <Router>
+        <ApolloClient>
+          <IoTApp />
+        </ApolloClient>
+      </Router>
+    </Store>
+  );
+};
 export default App;

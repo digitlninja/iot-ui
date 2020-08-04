@@ -2,16 +2,17 @@ import React, { useContext, useEffect, useState } from "react";
 import { Col } from "reactstrap";
 import { Route, Switch, Redirect } from "react-router-dom";
 import Loader from "react-loader-spinner";
+
 import AdminLayout from "layouts/Admin.js";
 import Register from "views/pages/auth/Register.js";
 import Error from "views/pages/Error.js";
 import Login from "./auth/Login";
 import { Context } from "../../store/Store";
 import useRefreshTokensMutation from "components/auth/graphql/useRefreshTokensMutation";
-import { SAVE_TOKENS } from "../../store/types";
 
-const IotApp = (props) => {
-  const [globalState, dispatch] = useContext(Context);
+const IotApp = () => {
+  // eslint-disable-next-line
+  const [globalState, dispatch, setUserAuthData] = useContext(Context);
   const [loading, setLoading] = useState(true);
   const [refreshUserTokens] = useRefreshTokensMutation();
 
@@ -20,7 +21,7 @@ const IotApp = (props) => {
       try {
         const { data } = await refreshUserTokens();
         setLoading(false);
-        await dispatch({ type: SAVE_TOKENS, payload: data.refreshUserTokens });
+        setUserAuthData(data.refreshUserTokens, refreshUserTokens);
       } catch (error) {
         setLoading(false);
         console.log(error);
@@ -48,20 +49,29 @@ const IotApp = (props) => {
   if (!globalState.isAuthenticated) {
     return (
       <Switch>
-        <Redirect from="/admin/dashboard" to="/" />
-        <Route path="/login" render={(props) => <Login {...props} />} />
-        <Route path="/register" render={(props) => <Register {...props} />} />
-        <Route path="/error" render={(props) => <Error {...props} />} />
-        <Route path="/" render={(props) => <Login {...props} />} />
+        <Redirect exact from="/" to="/login" />
+
+        <Route exact path="/login" render={(props) => <Login {...props} />} />
+        <Route
+          exact
+          path="/register"
+          render={(props) => <Register {...props} />}
+        />
+        <Route exact path="/error" render={(props) => <Error {...props} />} />
+        <Route exact path="/" render={(props) => <Login {...props} />} />
       </Switch>
     );
   }
   return (
     <Switch>
+      <Route exact path="/login" render={(props) => <Login {...props} />} />
+      <Route exact path="/error" render={(props) => <Error {...props} />} />
       <Route path="/" render={(props) => <AdminLayout {...props} />} />
-      <Route path="/login" render={(props) => <Login {...props} />} />
-      <Route path="/error" render={(props) => <Error {...props} />} />
-      <Route path="/register" render={(props) => <Register {...props} />} />
+      <Route
+        exact
+        path="/register"
+        render={(props) => <Register {...props} />}
+      />
     </Switch>
   );
 };

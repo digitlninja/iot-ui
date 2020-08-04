@@ -98,7 +98,6 @@ const RegisterForm = () => {
         return;
       }
     } catch (error) {
-      console.log({ error });
       history.push("/error");
       return;
     }

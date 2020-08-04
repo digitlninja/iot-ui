@@ -6,3 +6,8 @@ export const graphQLErrorResults = [
   { type: "UsernameExists" },
   { type: "ErrorResult" },
 ];
+
+export const errorMessageTypes = {
+  jwtExpired: "jwt expired",
+  invalidSignature: "invalid signature",
+};

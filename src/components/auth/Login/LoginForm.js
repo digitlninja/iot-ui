@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { useHistory } from "react-router";
+import { useHistory, Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import Loader from "react-loader-spinner";
 
@@ -13,13 +13,15 @@ import {
   InputGroupAddon,
   InputGroupText,
   InputGroup,
+  Row,
+  Col,
 } from "reactstrap";
 
 import useLoginMutation from "../graphql/useLoginMutation";
 import { Context } from "../../../store/Store";
 import { usernameRules, passwordRules } from "../validation-rules";
-import { SAVE_TOKENS } from "../../../store/types";
 import { isGraphQLErrorResult } from "../../../helpers";
+import useRefreshTokensMutation from "../graphql/useRefreshTokensMutation";
 
 const initialState = {
   username: "",
@@ -32,16 +34,11 @@ const initialState = {
 const LoginForm = () => {
   let history = useHistory();
   const [loginMutation, { loading }] = useLoginMutation();
+  const [refreshTokensMutation] = useRefreshTokensMutation();
   // eslint-disable-next-line
-  const [globalState, dispatch] = useContext(Context);
+  const [globalState, dispatch, setUserAuthData] = useContext(Context);
 
-  const {
-    register,
-    handleSubmit,
-    formState,
-    errors: formErrors,
-    reset,
-  } = useForm();
+  const { register, handleSubmit, errors: formErrors, reset } = useForm();
 
   const [state, setState] = useState(initialState);
   const [focusedUsername, setFocusedUsername] = useState(false);
@@ -65,15 +62,15 @@ const LoginForm = () => {
         flashErrorToState(data.logIn);
         return;
       }
-      await dispatch({ type: SAVE_TOKENS, payload: data.logIn });
-      history.push("/admin");
+
+      setUserAuthData(data.logIn, refreshTokensMutation);
+      history.push("/");
     } catch (error) {
-      console.log({ error });
+      console.error({ error });
       history.push("/error");
       return;
     }
   };
-
   return (
     <CardBody className="px-lg-5 py-lg-5">
       <div className="text-center text-muted mb-4">
@@ -137,9 +134,8 @@ const LoginForm = () => {
             color="info"
             type="submit"
             disabled={
-              loading ||
-              Object.keys(formErrors).length > 0 ||
-              !formState.isDirty
+              loading || Object.keys(formErrors).length > 0
+              // !formState.isDirty
             }
           >
             {loading && (
@@ -155,6 +151,18 @@ const LoginForm = () => {
             Sign in
           </Button>
         </div>
+        <Row className="mt-3">
+          <Col xs="6">
+            <Link className="text-muted" to="#pablo">
+              <small>Forgot password?</small>
+            </Link>
+          </Col>
+          <Col className="text-right" xs="6">
+            <Link className="text-muted" to="/register">
+              <small>Create new account</small>
+            </Link>
+          </Col>
+        </Row>
       </Form>
     </CardBody>
   );

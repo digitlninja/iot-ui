@@ -22,17 +22,9 @@ class Admin extends React.Component {
       if (prop.collapse) {
         return this.getRoutes(prop.views);
       }
-      if (prop.layout === "/admin") {
-        return (
-          <Route
-            path={prop.layout + prop.path}
-            component={prop.component}
-            key={key}
-          />
-        );
-      } else {
-        return null;
-      }
+      return (
+        <Route exact path={prop.path} component={prop.component} key={key} />
+      );
     });
   };
   getBrandText = (path) => {

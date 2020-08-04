@@ -113,6 +113,7 @@ class Sidebar extends React.Component {
       }
       if (prop.collapse) {
         var st = {};
+        // set the collapse type to true or false if it exists
         st[prop["state"]] = !this.state[prop.state];
         return (
           <NavItem key={key}>
@@ -149,12 +150,9 @@ class Sidebar extends React.Component {
         );
       }
       return (
-        <NavItem
-          className={this.activeRoute(prop.layout + prop.path)}
-          key={key}
-        >
+        <NavItem className={this.activeRoute(prop.path)} key={key}>
           <NavLink
-            to={prop.layout + prop.path}
+            to={prop.path}
             activeClassName=""
             onClick={this.closeSidenav}
             tag={NavLinkRRD}

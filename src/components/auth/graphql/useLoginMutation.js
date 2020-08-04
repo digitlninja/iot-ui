@@ -8,7 +8,6 @@ export default () =>
         ... on CognitoTokens {
           idToken
           accessToken
-          refreshToken
           __typename
         }
         ... on IncorrectCredentials {
