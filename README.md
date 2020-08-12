@@ -11,7 +11,7 @@ Ensure Docker is installed.
 Run this command from the project root folder.
 
 ```
-$ docker-compose up --build
+$ docker-compose -f docker-compose-dev.yml up --build
 ```
 
 ## Building an optimized production build

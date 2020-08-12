@@ -5,7 +5,7 @@ services:
       context: .
       dockerfile: Dockerfile.prod
     ports:
-      - "3000:3000"
+      - "3000:80"
     environment:
       - NODE_ENV=production
       - REACT_APP_GRAPHQL_API_URI=${GRAPHQL_API_URI}
