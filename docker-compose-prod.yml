@@ -3,9 +3,9 @@ services:
   iotweb:
     build:
       context: .
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile.prod
     ports:
       - "3000:3000"
     environment:
-      - NODE_ENV=development
+      - NODE_ENV=production
       - REACT_APP_GRAPHQL_API_URI=${GRAPHQL_API_URI}
