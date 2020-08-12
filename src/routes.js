@@ -1,5 +1,7 @@
 import Dashboard from "views/pages/dashboards/Dashboard.js";
 import Login from "views/pages/auth/Login.js";
+import ForgotPassword from "views/pages/auth/ForgotPassword.js";
+import ConfirmPassword from "views/pages/auth/ConfirmPassword.js";
 import Register from "views/pages/auth/Register.js";
 import Profile from "views/pages/examples/Profile.js";
 import Error from "views/pages/Error.js";
@@ -28,6 +30,20 @@ const routes = [
     path: "/login",
     name: "Login",
     component: Login,
+    // layout: "/admin",
+    isSideNavItem: false,
+  },
+  {
+    path: "/forgot-password",
+    name: "ForgotPassword",
+    component: ForgotPassword,
+    // layout: "/admin",
+    isSideNavItem: false,
+  },
+  {
+    path: "/confirm-password/:username?",
+    name: "ConfirmPassword",
+    component: ConfirmPassword,
     // layout: "/admin",
     isSideNavItem: false,
   },

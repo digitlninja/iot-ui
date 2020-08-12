@@ -5,7 +5,7 @@ import RegisterForm from "../../../components/auth/register/RegisterForm";
 
 const Register = () => (
   <>
-    <AuthHeader title="Sign up" lead="Create your new account with us!" />
+    <AuthHeader title="Sign up" />
     <Container className="mt--8 pb-5">
       <Row className="justify-content-center">
         <Col lg="6" md="8">

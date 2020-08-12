@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import { useHistory, Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import Loader from "react-loader-spinner";
@@ -17,32 +17,32 @@ import {
   Col,
 } from "reactstrap";
 
-import useLoginMutation from "../graphql/useLoginMutation";
-import { Context } from "../../../store/Store";
-import { passwordRules } from "../validation-rules";
+import useForgotPasswordMutation from "../graphql/useForgotPasswordMutation";
+import { usernameRules } from "../validation-rules";
 import { isGraphQLErrorResult } from "../../../helpers";
-import useRefreshTokensMutation from "../graphql/useRefreshTokensMutation";
 
 const initialState = {
   username: "",
-  password: "",
   userNameError: "",
-  passwordError: "",
   requestErrors: [],
 };
 
-const LoginForm = () => {
+const ForgotPasswordForm = () => {
   let history = useHistory();
-  const [loginMutation, { loading }] = useLoginMutation();
-  const [refreshTokensMutation] = useRefreshTokensMutation();
-  // eslint-disable-next-line
-  const [globalState, dispatch, setUserAuthData] = useContext(Context);
-
-  const { register, handleSubmit, errors: formErrors, reset } = useForm();
+  const [
+    forgotPasswordMutation,
+    { loading, data },
+  ] = useForgotPasswordMutation();
+  const {
+    register,
+    handleSubmit,
+    formState,
+    errors: formErrors,
+    reset,
+  } = useForm();
 
   const [state, setState] = useState(initialState);
   const [focusedUsername, setFocusedUsername] = useState(false);
-  const [focusedPassword, setFocusedPassword] = useState(false);
 
   const flashErrorToState = (error) => {
     setState({
@@ -54,23 +54,22 @@ const LoginForm = () => {
 
   const onSubmit = async (formData) => {
     try {
-      const { data } = await loginMutation({
-        variables: { username: formData.username, password: formData.password },
+      const { data } = await forgotPasswordMutation({
+        variables: { username: formData.username },
       });
       reset();
-      if (isGraphQLErrorResult(data.logIn)) {
-        flashErrorToState(data.logIn);
+      if (isGraphQLErrorResult(data.forgotPassword)) {
+        flashErrorToState(data.forgotPassword);
         return;
       }
-
-      setUserAuthData(data.logIn, refreshTokensMutation);
-      history.push("/");
+      history.push(`/confirm-password/${formData.username}`);
     } catch (error) {
       console.error({ error });
       history.push("/error");
       return;
     }
   };
+
   return (
     <CardBody className="px-lg-5 py-lg-5">
       <Form role="form" onSubmit={handleSubmit(onSubmit)}>
@@ -91,34 +90,22 @@ const LoginForm = () => {
               name="username"
               onFocus={() => setFocusedUsername(true)}
               onBlur={() => setFocusedUsername(false)}
-              innerRef={register({
-                required: true,
-                minLength: 3,
-                maxLength: 50,
-              })}
+              innerRef={register(usernameRules)}
             />
           </InputGroup>
         </FormGroup>
-        <FormGroup
-          className={classnames({
-            focused: focusedPassword,
-          })}
-        >
-          <InputGroup className="input-group-merge input-group-alternative">
-            <InputGroupAddon addonType="prepend">
-              <InputGroupText>
-                <i className="ni ni-lock-circle-open" />
-              </InputGroupText>
-            </InputGroupAddon>
-            <Input
-              placeholder="Password"
-              type="password"
-              name="password"
-              onFocus={() => setFocusedPassword(true)}
-              onBlur={() => setFocusedPassword(false)}
-              innerRef={register(passwordRules)}
-            />
-          </InputGroup>
+        <FormGroup>
+          {!loading &&
+            data &&
+            data.forgotPassword &&
+            data.forgotPassword.email && (
+              <div className="mt-2 pl-1">
+                <small className="text-success">
+                  If you have an account with us, an email has been sent to{" "}
+                  {data.forgotPassword.email}.
+                </small>
+              </div>
+            )}
           {state.requestErrors.length > 0 && (
             <div className="mt-2 pl-1">
               {state.requestErrors.map((error) => (
@@ -135,8 +122,9 @@ const LoginForm = () => {
             color="info"
             type="submit"
             disabled={
-              loading || Object.keys(formErrors).length > 0
-              // !formState.isDirty
+              loading ||
+              Object.keys(formErrors).length > 0 ||
+              !formState.isDirty
             }
           >
             {loading && (
@@ -149,13 +137,13 @@ const LoginForm = () => {
                 className="mr-2 float-left"
               />
             )}
-            Login
+            Submit
           </Button>
         </div>
         <Row className="mt-3">
           <Col xs="6">
-            <Link className="text-muted" to="/forgot-password">
-              <small>Forgot password?</small>
+            <Link className="text-muted" to="/login">
+              <small>Back to Login</small>
             </Link>
           </Col>
           <Col className="text-right" xs="6">
@@ -169,4 +157,4 @@ const LoginForm = () => {
   );
 };
 
-export default LoginForm;
+export default ForgotPasswordForm;

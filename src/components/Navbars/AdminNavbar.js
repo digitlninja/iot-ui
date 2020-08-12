@@ -51,11 +51,16 @@ const AdminNavbar = (props = initialProps) => {
 
   const onLogout = async (event) => {
     event.preventDefault();
-    clearUserAuthData(logOutMutation);
-    clearAllTokens();
-    client.resetStore();
+    try {
+      clearUserAuthData(logOutMutation);
+      clearAllTokens();
+      client.resetStore();
 
-    history.push("/login");
+      history.push("/login");
+    } catch (error) {
+      console.error({ error });
+      history.push("/error");
+    }
   };
 
   // function that on mobile devices makes the search open

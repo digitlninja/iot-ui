@@ -4,6 +4,8 @@ export const graphQLErrorResults = [
   { type: "TooManyPasswordAttempts" },
   { type: "UserNotConfirmed" },
   { type: "UsernameExists" },
+  { type: "LimitExceeded" },
+  { type: "ExpiredCode" },
   { type: "ErrorResult" },
 ];
 

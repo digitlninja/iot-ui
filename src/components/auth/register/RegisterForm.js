@@ -3,7 +3,6 @@ import { useHistory, Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import Loader from "react-loader-spinner";
 import zxcvbn from "zxcvbn";
-
 import classnames from "classnames";
 import {
   Button,
@@ -20,7 +19,14 @@ import {
 
 import useRegisterMutation from "../graphql/useRegisterMutation";
 import { isGraphQLErrorResult } from "../../../helpers";
-import { usernameRules, passwordRules, emailRules } from "../validation-rules";
+import {
+  usernameRules,
+  passwordRules,
+  emailRules,
+  firstNameRules,
+  lastNameRules,
+} from "../validation-rules";
+import PasswordStrengthIndictator from "../PasswordStrengthIndicator";
 
 const initialState = {
   email: "",
@@ -43,28 +49,19 @@ const RegisterForm = () => {
     formState,
     errors: formErrors,
     reset,
+    watch,
   } = useForm();
 
   const [state, setState] = useState(initialState);
   const [focusedEmail, setFocusedEmail] = useState(false);
   const [focusedUsername, setFocusedUsername] = useState(false);
+  const [focusedFirstName, setFocusedFirstName] = useState(false);
+  const [focusedLastName, setFocusedLastName] = useState(false);
   const [focusedPassword, setFocusedPassword] = useState(false);
+  const [focusedConfirmPassword, setFocusedConfirmPassword] = useState(false);
+  const passwordValue = watch("password");
 
-  const getPasswordStrengthColor = () => {
-    if (state.passwordStrength === 0) return "text-danger";
-    if (state.passwordStrength === 1) return "text-warning";
-    if (state.passwordStrength >= 2 && state.password.length > 6)
-      return "text-success";
-  };
-
-  const getPasswordStrengthText = () => {
-    if (state.passwordStrength === 0) return "weak";
-    if (state.passwordStrength === 1) return "fair";
-    if (state.passwordStrength >= 2) return "strong";
-    if (state.passwordStrength >= 4) return "very strong";
-  };
-
-  const handleChange = (event) => {
+  const onPasswordChange = (event) => {
     const password = event.target.value;
     const evaluation = zxcvbn(password);
     setState({
@@ -88,6 +85,8 @@ const RegisterForm = () => {
         variables: {
           email: formData.email,
           username: formData.username,
+          firstName: formData.firstName,
+          lastName: formData.lastName,
           password: formData.password,
         },
       });
@@ -107,9 +106,6 @@ const RegisterForm = () => {
     <CardBody className="px-lg-5 py-lg-5">
       {!state.isSuccessful ? (
         <>
-          <div className="text-center text-muted mb-4">
-            <small>Fill in your details</small>
-          </div>
           <Form role="form" onSubmit={handleSubmit(onSubmit)} noValidate>
             <FormGroup
               className={classnames({
@@ -169,6 +165,64 @@ const RegisterForm = () => {
             </FormGroup>
             <FormGroup
               className={classnames({
+                focused: focusedFirstName,
+              })}
+            >
+              <InputGroup className="input-group-merge input-group-alternative mb-3">
+                <InputGroupAddon addonType="prepend">
+                  <InputGroupText>
+                    <i className="ni ni-single-02" />
+                  </InputGroupText>
+                </InputGroupAddon>
+                <Input
+                  placeholder="First name"
+                  type="text"
+                  name="firstName"
+                  onFocus={() => setFocusedFirstName(true)}
+                  onBlur={() => setFocusedFirstName(false)}
+                  innerRef={register(firstNameRules)}
+                />
+              </InputGroup>
+              {formErrors && formErrors.username && (
+                <div className="mt-2">
+                  <small className="text-danger">
+                    Your first name must be longer than 2 characters and contain
+                    only letters.
+                  </small>
+                </div>
+              )}
+            </FormGroup>
+            <FormGroup
+              className={classnames({
+                focused: focusedLastName,
+              })}
+            >
+              <InputGroup className="input-group-merge input-group-alternative mb-3">
+                <InputGroupAddon addonType="prepend">
+                  <InputGroupText>
+                    <i className="ni ni-single-02" />
+                  </InputGroupText>
+                </InputGroupAddon>
+                <Input
+                  placeholder="Last name"
+                  type="text"
+                  name="lastName"
+                  onFocus={() => setFocusedLastName(true)}
+                  onBlur={() => setFocusedLastName(false)}
+                  innerRef={register(lastNameRules)}
+                />
+              </InputGroup>
+              {formErrors && formErrors.lastname && (
+                <div className="mt-2">
+                  <small className="text-danger">
+                    Your last name must be longer than 2 characters and contain
+                    only letters.
+                  </small>
+                </div>
+              )}
+            </FormGroup>
+            <FormGroup
+              className={classnames({
                 focused: focusedPassword,
               })}
             >
@@ -185,7 +239,7 @@ const RegisterForm = () => {
                   onFocus={() => setFocusedPassword(true)}
                   onBlur={() => setFocusedPassword(false)}
                   innerRef={register(passwordRules)}
-                  onChange={(event) => handleChange(event)}
+                  onChange={(event) => onPasswordChange(event)}
                 />
               </InputGroup>
               {formErrors && formErrors.password && (
@@ -205,29 +259,55 @@ const RegisterForm = () => {
                   ))}
                 </div>
               )}
-              {formState && formState.dirtyFields["password"] && (
-                <div className="text-muted font-italic pl-1 mt-2">
-                  <small>
-                    Password strength:{" "}
-                    <span
-                      className={`text-strong ${getPasswordStrengthColor()}`}
-                    >
-                      <strong>{getPasswordStrengthText()}</strong>
-                    </span>
+              {!focusedPassword ||
+                (formState && formState.dirtyFields["password"] && (
+                  <PasswordStrengthIndictator
+                    passwordStrength={state.passwordStrength}
+                    password={state.password}
+                  />
+                ))}
+            </FormGroup>
+            <FormGroup
+              className={classnames("mb-3", {
+                focused: focusedConfirmPassword,
+              })}
+            >
+              <InputGroup className="input-group-merge input-group-alternative">
+                <InputGroupAddon addonType="prepend">
+                  <InputGroupText>
+                    <i className="ni ni-lock-circle-open" />
+                  </InputGroupText>
+                </InputGroupAddon>
+                <Input
+                  placeholder="Confirm password"
+                  type="password"
+                  name="confirmPassword"
+                  onFocus={() => setFocusedConfirmPassword(true)}
+                  onBlur={() => setFocusedConfirmPassword(false)}
+                  innerRef={register({
+                    ...passwordRules,
+                    validate: (value) => value === passwordValue,
+                  })}
+                />
+              </InputGroup>
+              {formErrors && formErrors.confirmPassword && (
+                <div className="mt-2">
+                  <small className="text-danger">
+                    Your passwords must match.
                   </small>
                 </div>
               )}
-              {state.isSuccessful && (
-                <>
-                  <div className="mt-2 pl-1">
-                    <small className="text-success">
-                      Thanks, {state.username}! A link is on it's way to your
-                      inbox. Please use it to verify your account.
-                    </small>
-                  </div>
-                </>
-              )}
             </FormGroup>
+            {state.isSuccessful && (
+              <>
+                <div className="mt-2 pl-1">
+                  <small className="text-success">
+                    Thanks, {state.username}! A link is on it's way to your
+                    inbox. Please use it to verify your account.
+                  </small>
+                </div>
+              </>
+            )}
             <div className="text-center">
               <Button
                 className="mt-4"
@@ -252,13 +332,11 @@ const RegisterForm = () => {
                 Create account
               </Button>
             </div>
-            {state.isSuccessful && (
-              <div className="mt-2 text-center">
-                <Link className="mt-4 small text-primary" to="/login">
-                  Go to login
-                </Link>
-              </div>
-            )}
+            <div className="mt-2 text-center">
+              <Link className="mt-4 small text-primary" to="/login">
+                Go to login
+              </Link>
+            </div>
           </Form>
         </>
       ) : (

@@ -7,6 +7,8 @@ import AdminLayout from "layouts/Admin.js";
 import Register from "views/pages/auth/Register.js";
 import Error from "views/pages/Error.js";
 import Login from "./auth/Login";
+import ForgotPassword from "./auth/ForgotPassword";
+import ConfirmPassword from "./auth/ConfirmPassword";
 import { Context } from "../../store/Store";
 import useRefreshTokensMutation from "components/auth/graphql/useRefreshTokensMutation";
 
@@ -57,6 +59,17 @@ const IotApp = () => {
           path="/register"
           render={(props) => <Register {...props} />}
         />
+        <Route
+          exact
+          path="/forgot-password"
+          render={(props) => <ForgotPassword {...props} />}
+        />
+        <Route
+          exact
+          path="/confirm-password/:username?"
+          render={(props) => <ConfirmPassword {...props} />}
+        />
+
         <Route exact path="/error" render={(props) => <Error {...props} />} />
         <Route exact path="/" render={(props) => <Login {...props} />} />
       </Switch>
@@ -64,6 +77,7 @@ const IotApp = () => {
   }
   return (
     <Switch>
+      <Redirect exact from="/login" to="/" />
       <Route exact path="/login" render={(props) => <Login {...props} />} />
       <Route exact path="/error" render={(props) => <Error {...props} />} />
       <Route path="/" render={(props) => <AdminLayout {...props} />} />

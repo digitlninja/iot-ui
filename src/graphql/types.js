@@ -5,6 +5,8 @@ const types = gql`
     id: String
     email: String
     username: String
+    firstName: String
+    lastName: String
     __typename: String
   }
 
@@ -65,6 +67,30 @@ const types = gql`
     __typename: String
   }
 
+  type ForgotPasswordSuccess {
+    email: String!
+    __typename: String
+  }
+
+  type LimitExceeded {
+    id: String
+    path: String!
+    message: String!
+    __typename: String
+  }
+
+  type ConfirmPasswordSuccess {
+    username: String!
+    __typename: String
+  }
+
+  type ExpiredCode {
+    id: String
+    path: String!
+    message: String!
+    __typename: String
+  }
+
   union LoginResult =
       CognitoTokens
     | IncorrectCredentials
@@ -79,6 +105,19 @@ const types = gql`
     | IncorrectCredentials
     | UsernameExists
     | ValidationFailed
+    | ErrorResult
+
+  union ForgotPasswordResult =
+      ForgotPasswordSuccess
+    | ValidationFailed
+    | LimitExceeded
+    | ErrorResult
+
+  union ConfirmPasswordResult =
+      ConfirmPasswordSuccess
+    | ValidationFailed
+    | ExpiredCode
+    | LimitExceeded
     | ErrorResult
 `;
 

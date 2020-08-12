@@ -39,6 +39,7 @@ import ProfileHeader from "components/headers/ProfileHeader.js";
 import useUsersQuery from "../../../components/auth/graphql/useUsersQuery";
 
 const Profile = () => {
+  // eslint-disable-next-line
   const { loading2, error, data } = useUsersQuery();
   return (
     <>

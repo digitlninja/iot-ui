@@ -11,24 +11,29 @@ export default () =>
           __typename
         }
         ... on IncorrectCredentials {
+          id
           message
           __typename
         }
         ... on TooManyPasswordAttempts {
+          id
           message
           __typename
         }
         ... on UserNotConfirmed {
+          id
           message
           path
           __typename
         }
         ... on ValidationFailed {
+          id
           messages
           path
           __typename
         }
         ... on ErrorResult {
+          id
           message
           path
           __typename
