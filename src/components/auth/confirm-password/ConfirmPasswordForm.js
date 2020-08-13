@@ -19,7 +19,7 @@ import {
 
 import useForgotPasswordMutation from "../graphql/useForgotPasswordMutation";
 import useConfirmPasswordMutation from "../graphql/useConfirmPasswordMutation";
-import { usernameRules, passwordRules } from "../validation-rules";
+import { usernameOrEmailRules, passwordRules } from "../validation-rules";
 import { isGraphQLErrorResult } from "../../../helpers";
 
 const initialState = {
@@ -130,12 +130,13 @@ const ConfirmPasswordForm = () => {
               </InputGroupText>
             </InputGroupAddon>
             <Input
-              placeholder="Username"
+              placeholder="Username or email"
               type="text"
               name="username"
+              autocomplete="username"
               onFocus={() => setFocusedUsername(true)}
               onBlur={() => setFocusedUsername(false)}
-              innerRef={register(usernameRules)}
+              innerRef={register(usernameOrEmailRules)}
               defaultValue={paramUsername || ""}
             />
           </InputGroup>
@@ -152,7 +153,7 @@ const ConfirmPasswordForm = () => {
               </InputGroupText>
             </InputGroupAddon>
             <Input
-              placeholder="Verification Code"
+              placeholder="Verification code"
               type="text"
               name="verificationCode"
               onFocus={() => setFocusedVerificationCode(true)}
@@ -177,7 +178,7 @@ const ConfirmPasswordForm = () => {
         </small>
         {state.codeResent && (
           <div className="ml-1 mb-3">
-            <small className="text-danger">
+            <small className="text-success">
               We've sent another code to your email.
             </small>
           </div>
@@ -197,6 +198,7 @@ const ConfirmPasswordForm = () => {
               placeholder="New password"
               type="password"
               name="newPassword"
+              autocomplete="new-password"
               onFocus={() => setFocusedNewPassword(true)}
               onBlur={() => setFocusedNewPassword(false)}
               innerRef={register(passwordRules)}

@@ -18,7 +18,7 @@ import {
 } from "reactstrap";
 
 import useForgotPasswordMutation from "../graphql/useForgotPasswordMutation";
-import { usernameRules } from "../validation-rules";
+import { usernameOrEmailRules } from "../validation-rules";
 import { isGraphQLErrorResult } from "../../../helpers";
 
 const initialState = {
@@ -85,12 +85,13 @@ const ForgotPasswordForm = () => {
               </InputGroupText>
             </InputGroupAddon>
             <Input
-              placeholder="Username"
+              placeholder="Username or email"
               type="text"
               name="username"
+              autocomplete="username"
               onFocus={() => setFocusedUsername(true)}
               onBlur={() => setFocusedUsername(false)}
-              innerRef={register(usernameRules)}
+              innerRef={register(usernameOrEmailRules)}
             />
           </InputGroup>
         </FormGroup>

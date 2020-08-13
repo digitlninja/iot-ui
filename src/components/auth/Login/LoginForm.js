@@ -19,7 +19,7 @@ import {
 
 import useLoginMutation from "../graphql/useLoginMutation";
 import { Context } from "../../../store/Store";
-import { passwordRules } from "../validation-rules";
+import { passwordRules, usernameOrEmailRules } from "../validation-rules";
 import { isGraphQLErrorResult } from "../../../helpers";
 import useRefreshTokensMutation from "../graphql/useRefreshTokensMutation";
 
@@ -89,13 +89,10 @@ const LoginForm = () => {
               placeholder="Username"
               type="text"
               name="username"
+              autocomplete="username"
               onFocus={() => setFocusedUsername(true)}
               onBlur={() => setFocusedUsername(false)}
-              innerRef={register({
-                required: true,
-                minLength: 3,
-                maxLength: 50,
-              })}
+              innerRef={register(usernameOrEmailRules)}
             />
           </InputGroup>
         </FormGroup>
@@ -114,6 +111,7 @@ const LoginForm = () => {
               placeholder="Password"
               type="password"
               name="password"
+              autocomplete="current-password"
               onFocus={() => setFocusedPassword(true)}
               onBlur={() => setFocusedPassword(false)}
               innerRef={register(passwordRules)}

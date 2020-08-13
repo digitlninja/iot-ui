@@ -13,6 +13,12 @@ export const usernameRules = {
   pattern: alphaNumericRegex,
 };
 
+export const usernameOrEmailRules = {
+  required: true,
+  minLength: 3,
+  maxLength: 50,
+};
+
 export const firstNameRules = {
   required: true,
   minLength: 3,
