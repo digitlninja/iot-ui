@@ -88,7 +88,6 @@ const ConfirmPasswordForm = () => {
         flashErrorToState(data.confirmPassword);
         return;
       }
-      // setTimeout(() => setState({ ...state, codeResent: false }), 4000);
       setTimeout(() => push("/login"), 4000);
     } catch (error) {
       console.error({ error });
