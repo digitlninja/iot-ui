@@ -130,7 +130,7 @@ const ConfirmPasswordForm = () => {
                             placeholder="Username or email"
                             type="text"
                             name="username"
-                            autocomplete="username"
+                            autoComplete="username"
                             onFocus={() => setFocusedUsername(true)}
                             onBlur={() => setFocusedUsername(false)}
                             innerRef={register(usernameOrEmailRules)}
@@ -195,7 +195,7 @@ const ConfirmPasswordForm = () => {
                             placeholder="New password"
                             type="password"
                             name="newPassword"
-                            autocomplete="new-password"
+                            autoComplete="new-password"
                             onFocus={() => setFocusedNewPassword(true)}
                             onBlur={() => setFocusedNewPassword(false)}
                             innerRef={register(passwordRules)}

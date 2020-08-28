@@ -150,7 +150,7 @@ const RegisterForm = () => {
                   placeholder="Username"
                   type="text"
                   name="username"
-                  autocomplete="username"
+                  autoComplete="username"
                   onFocus={() => setFocusedUsername(true)}
                   onBlur={() => setFocusedUsername(false)}
                   innerRef={register(usernameRules)}
@@ -237,7 +237,7 @@ const RegisterForm = () => {
                   name="password"
                   placeholder="Password"
                   type="password"
-                  autocomplete="current-password"
+                  autoComplete="current-password"
                   onFocus={() => setFocusedPassword(true)}
                   onBlur={() => setFocusedPassword(false)}
                   innerRef={register(passwordRules)}
